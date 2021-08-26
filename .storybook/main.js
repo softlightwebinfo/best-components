@@ -15,11 +15,6 @@ module.exports = {
             test: /\.scss$/,
             use: ['style-loader', {
                 loader: 'css-loader',
-                options: {
-                    modules: {
-                        localIdentName: '[local]-[hash:5]'
-                    }
-                }
             }, 'sass-loader'],
             include: path.resolve(__dirname, '../'),
         });

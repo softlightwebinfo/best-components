@@ -8,6 +8,8 @@ export * from './TInputType';
 export * from './TLineStatus';
 export * from './TModalSize';
 export * from './TNavAppearance';
+export * from './TObject';
+export * from './TOnClick';
 export * from './TPlacement';
 export * from './TSimpleColor';
 export * from './TSize';
