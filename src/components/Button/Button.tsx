@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import { BEM } from "../../functions/BEM";
+import { BEM } from "../../functions";
 import { IButtonProps } from "../../props";
 
 export const Button = ({ type = "button", ...props }: IButtonProps) => {

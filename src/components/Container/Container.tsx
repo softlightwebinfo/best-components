@@ -1,23 +1,16 @@
-import classNames from "classnames";
 import React from "react";
-import { BEM } from "../../functions/BEM";
-import { IButtonProps } from "../../props";
+import { BEM } from "../../functions";
+import { IContainerProps } from "../../props/IContainerProps";
 
-export const Button = ({ type = "button", ...props }: IButtonProps) => {
-  const cx = new BEM("Button", {
-    dashed: props.dashed,
-    round: props.round,
-  });
+export const Container = (props: IContainerProps) => {
+  const cx = new BEM("Container", {});
   cx.Append(props.className);
   return (
-    <button
-      type={ type }
+    <div
       style={ props.style }
-      onClick={ props.onClick }
-      disabled={ props.disabled }
       className={ cx.toString() }
     >
       { props.children }
-    </button>
+    </div>
   );
 };

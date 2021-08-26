@@ -44,3 +44,18 @@ $screen-xl-min: 1340px;
 $columns: 12;
 $column-gap: 2rem;
 $gap: 2rem;
+$grid-gutter-width: 30px !default;
+
+$containerMedia_xss: 320px;
+$containerMedia_xs: 480px;
+$containerMedia_sm: 768px;
+$containerMedia_md: 992px;
+$containerMedia_lg: 1200px;
+$containerMedia_llg: 1333px;
+$containerMedia_xl: 1500px;
+
+$container-sm: 100% !default;
+$container-md: (940px + $grid-gutter-width);
+$container-lg: (1140px + $grid-gutter-width);
+$container-llg: (1276px + $grid-gutter-width);
+$container-xl: (1440px + $grid-gutter-width);
