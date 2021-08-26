@@ -1,0 +1,94 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Euroanuncio\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js publish
+
+PATH: 
+  C:\Users\Euroanuncio\IdeaProjects\library-ui\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\ProgramData\chocolatey\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Euroanuncio\AppData\Local\Microsoft\WindowsApps;C:\Users\Euroanuncio\AppData\Local\.meteor;;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2\bin;;C:\Users\Euroanuncio\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  16.6.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\Euroanuncio\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137023:13)
+      at Interface.emit (node:events:394:28)
+      at Interface._ttyWrite (node:readline:1081:16)
+      at ReadStream.onkeypress (node:readline:288:10)
+      at ReadStream.emit (node:events:394:28)
+      at emitKeys (node:internal/readline/utils:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:61:36)
+      at ReadStream.emit (node:events:394:28)
+      at addChunk (node:internal/streams/readable:312:12)
+
+npm manifest: 
+  {
+    "name": "@codeunic/library-react",
+    "version": "0.36.4",
+    "description": "The project was developer for anyone people need the  react components.",
+    "main": "lib/index.js",
+    "module": "lib/index.esm.js",
+    "types": "lib/index.d.ts",
+    "author": "Rafa Gonzalez Muñoz",
+    "repository": {
+      "url": "https://github.com/softlightwebinfo/library-ui"
+    },
+    "homepage": "https://softlightwebinfo.github.io/library-ui",
+    "scripts": {
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook",
+      "build": "rollup -c",
+      "deploy-storybook": "yarn build-storybook && gh-pages -d storybook-static",
+      "cli": "node -r esm bin/index.js"
+    },
+    "devDependencies": {
+      "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
+      "@babel/core": "^7.14.6",
+      "@codeunic/library-hooks": "^0.6.0",
+      "@rollup/plugin-commonjs": "^19.0.0",
+      "@rollup/plugin-node-resolve": "^13.0.0",
+      "@storybook/addon-actions": "^6.3.4",
+      "@storybook/addon-essentials": "^6.3.4",
+      "@storybook/addon-links": "^6.3.4",
+      "@storybook/react": "^6.3.4",
+      "@types/react": "^17.0.14",
+      "@types/react-router-dom": "^5.1.8",
+      "babel-loader": "^8.2.2",
+      "classnames": "^2.3.1",
+      "esm": "^3.2.25",
+      "gh-pages": "^3.2.3",
+      "postcss": "^8.3.5",
+      "query-string": "^7.0.1",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-router-dom": "^5.2.0",
+      "rollup": "^2.53.1",
+      "rollup-plugin-copy": "^3.4.0",
+      "rollup-plugin-peer-deps-external": "^2.2.4",
+      "rollup-plugin-postcss": "^4.0.0",
+      "rollup-plugin-sass": "^1.2.2",
+      "rollup-plugin-typescript2": "^0.30.0",
+      "sass-loader": "10.2.0",
+      "typescript": "^4.3.5"
+    },
+    "peerDependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    },
+    "dependencies": {
+      "@fortawesome/fontawesome-svg-core": "^1.2.35",
+      "@fortawesome/free-solid-svg-icons": "^5.15.3",
+      "@fortawesome/react-fontawesome": "^0.1.14"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
