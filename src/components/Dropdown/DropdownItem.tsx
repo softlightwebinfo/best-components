@@ -1,13 +1,14 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { IDropdownMenuProps } from "../../props/IDropdownMenuProps";
+import { IDropdownItemProps } from "../../props/IDropdownItemProps";
+import { Item } from "../Item/Item";
 
-export const DropdownMenu = (props: IDropdownMenuProps) => {
-  const cx = new BEM("DropdownMenu", {});
+export const DropdownItem = (props: IDropdownItemProps) => {
+  const cx = new BEM("DropdownItem", {});
   cx.Append(props.className);
   return (
-    <div className={ cx.toString() }>
+    <Item style={ props.style } onClick={ props.onClick } className={ cx.toString() }>
       { props.children }
-    </div>
+    </Item>
   );
 };

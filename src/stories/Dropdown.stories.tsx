@@ -1,26 +1,26 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Button } from "../components";
+import { Divider } from "../components/Divider/Divider";
+import { Dropdown } from "../components/Dropdown/Dropdown";
+import { DropdownItem } from "../components/Dropdown/DropdownItem";
 
 export default {
-  title: 'Base/Button/Default',
-  component: Button,
+  title: 'Base/Dropdown/Default',
+  component: Dropdown,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button { ...args } />;
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+  <Dropdown { ...args } trigger={ <Button>John Doe</Button> }>
+    <DropdownItem>Profile</DropdownItem>
+    <DropdownItem>Inbox</DropdownItem>
+    <Divider/>
+    <DropdownItem>Settings</DropdownItem>
+    <Divider/>
+    <DropdownItem>SignOut</DropdownItem>
+  </Dropdown>
+);
 export const Default = Template.bind({});
-Default.args = {
-  children: "Default",
-};
-export const Dashed = Template.bind({});
-Dashed.args = {
-  children: "Dashed",
-  dashed: true,
-};
-export const Round = Template.bind({});
-Round.args = {
-  children: "Dashed",
-  round: true,
-};
+Default.args = {};

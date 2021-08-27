@@ -1,16 +1,13 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { IDropdownProps } from "../../props/IDropdownProps";
+import { IDropdownMenuProps } from "../../props/IDropdownMenuProps";
 
-export const Dropdown = (props: IDropdownProps) => {
-  const cx = new BEM("Dropdown", {});
+export const DropdownMenu = (props: IDropdownMenuProps) => {
+  const cx = new BEM("DropdownMenu", {});
   cx.Append(props.className);
   return (
     <div className={ cx.toString() }>
-      <span>{ props.trigger }</span>
-      <DropdownMenu>
-
-      </DropdownMenu>
+      { props.children }
     </div>
   );
 };
