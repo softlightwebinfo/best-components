@@ -6,3 +6,4 @@ export * from './IDropdownMenuProps';
 export * from './IDropdownProps';
 export * from './IInputProps';
 export * from './IItemProps';
+export * from './IPaginationProps';

@@ -1,6 +1,6 @@
 import { range } from "@codeunic/library-hooks";
 import React, { useEffect, useState } from "react";
-import { BEM } from "../../../lib";
+import { BEM } from "../../functions";
 import { IPaginationProps } from "../../props/IPaginationProps";
 
 export const LEFT_PAGE = "LEFT";

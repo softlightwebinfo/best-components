@@ -4,3 +4,4 @@ export * from './Divider';
 export * from './Dropdown';
 export * from './Input';
 export * from './Item';
+export * from './Pagination';
