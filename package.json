@@ -1,6 +1,6 @@
 {
   "name": "@codeunic/best-components",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "The project was developer for anyone people need the  react components.",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -55,6 +55,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14"
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@storybook/addon-docs": "^6.3.7"
   }
 }
