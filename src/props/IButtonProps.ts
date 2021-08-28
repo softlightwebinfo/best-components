@@ -1,6 +1,6 @@
+import { ReactNode } from "react";
 import { IProps } from "../interfaces";
-import { TButtonType, TSize } from "../types";
-import { TOnClick } from "../types";
+import { TButtonType, TOnClick, TSize } from "../types";
 
 export interface IButtonProps extends IProps {
   dashed?: boolean;
@@ -8,6 +8,7 @@ export interface IButtonProps extends IProps {
   default?: boolean;
   onClick?: TOnClick;
   disabled?: boolean;
+  icon?: ReactNode;
   type?: TButtonType;
   size?: TSize;
 }

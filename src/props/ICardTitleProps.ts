@@ -1,5 +1,5 @@
 import { IProps } from "../interfaces";
 
-export interface ICardHeaderProps extends IProps {
+export interface ICardTitleProps extends IProps {
 
 }

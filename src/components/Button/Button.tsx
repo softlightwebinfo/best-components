@@ -8,6 +8,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
     round: props.round,
     default: props.default,
     [props.size ?? '']: !!props.size,
+    iconChildren: !!(props.icon && !props.children),
   });
   cx.Append(props.className);
   return (
@@ -18,6 +19,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
       disabled={ props.disabled }
       className={ cx.toString() }
     >
+      { props.icon && (<span className={ cx.Children("icon") }>{ props.icon }</span>) }
       { props.children }
     </button>
   );

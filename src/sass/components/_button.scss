@@ -1,5 +1,10 @@
 .Button {
+  $then: &;
   @include Button();
+
+  &__icon {
+    margin-right: var(--space-s);
+  }
 
   &:hover,
   &:focus,
@@ -63,6 +68,12 @@
     --button-size: 50px;
     --button-padding: 4px 40px;
     font-size: 18px;
+  }
+
+  &--iconChildren {
+    #{$then}__icon {
+      margin: 0;
+    }
   }
 
   &--default {

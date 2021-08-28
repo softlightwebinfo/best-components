@@ -1,13 +1,13 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { ICardHeaderProps } from "../../props/ICardHeaderProps";
+import { ICardBodyProps } from "../../props/ICardBodyProps";
 
-export const CardHeader = (props: ICardHeaderProps) => {
-  const cx = new BEM("CardHeader", {});
+export const CardBody = (props: ICardBodyProps) => {
+  const cx = new BEM("CardBody", {});
   cx.Append(props.className);
   return (
-    <header className={ cx.toString() } style={ props.style }>
+    <section className={ cx.toString() } style={ props.style }>
       { props.children }
-    </header>
+    </section>
   );
 };
