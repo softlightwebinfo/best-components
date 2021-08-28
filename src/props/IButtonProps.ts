@@ -1,6 +1,6 @@
 import { IProps } from "../interfaces";
-import { TButtonType } from "../types";
-import { TOnClick } from "../types/TOnClick";
+import { TButtonType, TSize } from "../types";
+import { TOnClick } from "../types";
 
 export interface IButtonProps extends IProps {
   dashed?: boolean;
@@ -9,4 +9,5 @@ export interface IButtonProps extends IProps {
   onClick?: TOnClick;
   disabled?: boolean;
   type?: TButtonType;
+  size?: TSize;
 }

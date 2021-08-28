@@ -28,6 +28,41 @@
 
   &--round {
     border-radius: 32px;
+    --button-padding: 4px 35px;
+  }
+
+  &--lg {
+    --button-size: 42px;
+    --button-padding: 4px 30px;
+    font-size: 16px;
+  }
+
+  &--md {
+    --button-size: 38px;
+    --button-padding: 4px 25px;
+    font-size: 15px;
+  }
+
+  &--sm {
+    --button-size: 32px;
+    --button-padding: 4px 15px;
+  }
+
+  &--s {
+    --button-size: 25px;
+    --button-padding: 2px 10px;
+    font-size: 13px;
+  }
+
+  &--xs {
+    --button-padding: 2px 10px;
+    font-size: 12px;
+  }
+
+  &--initial {
+    --button-size: 50px;
+    --button-padding: 4px 40px;
+    font-size: 18px;
   }
 
   &--default {

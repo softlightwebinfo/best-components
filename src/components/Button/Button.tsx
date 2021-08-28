@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import React from "react";
 import { BEM } from "../../functions";
 import { IButtonProps } from "../../props";
@@ -8,6 +7,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
     dashed: props.dashed,
     round: props.round,
     default: props.default,
+    [props.size ?? '']: !!props.size,
   });
   cx.Append(props.className);
   return (

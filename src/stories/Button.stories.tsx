@@ -24,3 +24,9 @@ Round.args = {
   children: "Dashed",
   round: true,
 };
+export const Size = Template.bind({});
+Size.args = {
+  children: "Dashed",
+  round: true,
+  size: "md",
+};
