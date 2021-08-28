@@ -1,0 +1,53 @@
+.Avatar {
+  --avatar-size: 35px;
+  --avatar-radius: 50%;
+  --avatar-background: transparent;
+
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+  background: var(--avatar-background);
+
+  img, & {
+    border-radius: var(--avatar-radius);
+  }
+
+  span {
+    font-size: var(--avatar-font-size);
+  }
+
+  &--xs {
+    --avatar-size: 30px;
+  }
+
+  &--s {
+    --avatar-size: 35px;
+  }
+
+  &--sm {
+    --avatar-size: 40px;
+  }
+
+  &--md {
+    --avatar-size: 45px;
+  }
+
+  &--lg {
+    --avatar-size: 50px;
+  }
+
+  &--initial {
+    --avatar-size: 60px;
+  }
+
+  &--rounded {
+    --avatar-radius: var(--border-radius-soft);
+  }
+
+  &--isName {
+    --avatar-background: gainsboro;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+}

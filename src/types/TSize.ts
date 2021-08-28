@@ -1,1 +1,1 @@
-export type TSize = "lg" | "md" | "sm" | "xs" | "initial";
+export type TSize = "lg" | "md" | "sm" | "s" | "xs" | "initial";

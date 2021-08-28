@@ -1,4 +1,6 @@
 export * from './Alert';
+export * from './Avatar';
+export * from './AvatarStacked';
 export * from './Button';
 export * from './ButtonToolbar';
 export * from './Container';

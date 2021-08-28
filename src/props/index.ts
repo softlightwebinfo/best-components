@@ -1,4 +1,6 @@
 export * from './IAlertProps';
+export * from './IAvatarProps';
+export * from './IAvatarStackedProps';
 export * from './IButtonProps';
 export * from './IButtonToolbarProps';
 export * from './IContainerProps';

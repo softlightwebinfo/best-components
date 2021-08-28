@@ -1,26 +1,23 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Button } from "../components";
+import { Avatar } from "../components/Avatar/Avatar";
 
 export default {
-  title: 'Base/Button/Default',
-  component: Button,
+  title: 'Base/Avatar/Default',
+  component: Avatar,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Avatar>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button { ...args } />;
+const Template: ComponentStory<typeof Avatar> = (args) => <Avatar { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  children: "Default",
+  image: "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_640.png",
+  name: "Avatar",
+  alt: "Avatar",
 };
-export const Dashed = Template.bind({});
-Dashed.args = {
-  children: "Dashed",
-  dashed: true,
-};
-export const Round = Template.bind({});
-Round.args = {
-  children: "Dashed",
-  round: true,
+export const Name = Template.bind({});
+Name.args = {
+  name: "Avatar",
+  alt: "Avatar",
 };
