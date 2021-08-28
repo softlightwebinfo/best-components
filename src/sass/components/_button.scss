@@ -29,4 +29,10 @@
   &--round {
     border-radius: 32px;
   }
+
+  &--default {
+    background: transparent;
+    border: var(--border-size-none);
+    @include shadow(none);
+  }
 }

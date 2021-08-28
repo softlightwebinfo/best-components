@@ -1,3 +1,4 @@
+export * from './TAlertType';
 export * from './TAlign';
 export * from './TAppearance';
 export * from './TButtonType';

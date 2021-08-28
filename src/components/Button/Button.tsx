@@ -7,6 +7,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
   const cx = new BEM("Button", {
     dashed: props.dashed,
     round: props.round,
+    default: props.default,
   });
   cx.Append(props.className);
   return (

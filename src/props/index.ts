@@ -1,4 +1,6 @@
+export * from './IAlertProps';
 export * from './IButtonProps';
+export * from './IButtonToolbarProps';
 export * from './IContainerProps';
 export * from './IDividerProps';
 export * from './IDropdownItemProps';
