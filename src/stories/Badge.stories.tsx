@@ -1,23 +1,21 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Avatar } from "../components/Avatar/Avatar";
+import { Badge } from "../components/Badge/Badge";
 
 export default {
-  title: 'Base/Avatar/Default',
-  component: Avatar,
+  title: 'Base/Badge/Default',
+  component: Badge,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Avatar>;
+} as ComponentMeta<typeof Badge>;
 
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar { ...args } />;
+const Template: ComponentStory<typeof Badge> = (args) => <Badge { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  image: "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_640.png",
-  name: "Avatar",
-  alt: "Avatar",
+  label: "Badge",
 };
-export const Name = Template.bind({});
-Name.args = {
-  name: "Avatar",
-  alt: "Avatar",
+export const Icon = Template.bind({});
+Icon.args = {
+  icon: <i className={"fa fa-check"}/>,
+  label: "Badge",
 };
