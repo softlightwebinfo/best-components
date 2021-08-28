@@ -3,6 +3,7 @@ export * from './IAvatarProps';
 export * from './IAvatarStackedProps';
 export * from './IBadgeProps';
 export * from './IBannerProps';
+export * from './IBreadcrumbProps';
 export * from './IButtonProps';
 export * from './IButtonToolbarProps';
 export * from './IContainerProps';
