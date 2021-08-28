@@ -1,6 +1,7 @@
 export * from './TAlertType';
 export * from './TAlign';
 export * from './TAppearance';
+export * from './TBannerType';
 export * from './TButtonType';
 export * from './TDropdownPlacement';
 export * from './TDropdownTrigger';

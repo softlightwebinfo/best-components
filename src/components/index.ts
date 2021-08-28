@@ -2,6 +2,7 @@ export * from './Alert';
 export * from './Avatar';
 export * from './AvatarStacked';
 export * from './Badge';
+export * from './Banner';
 export * from './Button';
 export * from './ButtonToolbar';
 export * from './Container';

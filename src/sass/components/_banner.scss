@@ -1,0 +1,64 @@
+.Banner {
+  $then: &;
+  top: var(--banner-top);
+  left: var(--banner-left);
+  right: var(--banner-right);
+  bottom: var(--banner-bottom);
+  @include shadow(var(--shadow-xl));
+  position: fixed;
+
+  &--fixed {
+    border-radius: var(--border-radius-none);
+    --banner-top: 0;
+    --banner-left: 0;
+    --banner-right: 0;
+  }
+
+  &--floating {
+    --banner-top: var(--space-m);
+    --banner-right: var(--space-m);
+    --banner-left: var(--space-m);
+  }
+
+  &--bubble {
+    --banner-top: var(--space-m);
+    --banner-right: var(--space-m);
+  }
+
+  &--bottom-right,
+  &--right-bottom {
+    --banner-top: initial;
+    --banner-left: initial;
+    --banner-right: var(--space-m);
+    --banner-bottom: var(--space-m);
+  }
+
+  &--bottom-left,
+  &--left-bottom {
+    --banner-top: initial;
+    --banner-right: initial;
+    --banner-left: var(--space-m);
+    --banner-bottom: var(--space-m);
+  }
+
+  &--top-right,
+  &--right-top {
+    --banner-left: initial;
+    --banner-bottom: initial;
+    --banner-right: var(--space-m);
+    --banner-top: var(--space-m);
+  }
+
+  &--top-left,
+  &--left-top {
+    --banner-bottom: initial;
+    --banner-right: initial;
+    --banner-left: var(--space-m);
+    --banner-top: var(--space-m);
+  }
+
+  &--bottom {
+    --banner-bottom: var(--space-m);
+    --banner-top: initial;
+  }
+}

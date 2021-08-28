@@ -1,10 +1,11 @@
 import React, { useMemo } from "react";
 import { BEM } from "../../functions";
-import { IAlertProps } from "../../props/IAlertProps";
+import { IAlertProps } from "../../props";
 
 export const Alert = ({ ...props }: IAlertProps) => {
   const cx = new BEM("Alert", {
     [props.type ?? '']: !!props.type,
+    isTitle: !!(props.title && props.message),
   });
   cx.Append(props.className);
 

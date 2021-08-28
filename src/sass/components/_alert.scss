@@ -13,6 +13,12 @@
     margin-bottom: var(--space-xs);
   }
 
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: var(--space-l);
+  }
+
   &__icon {
     align-self: baseline;
     background-color: white;
@@ -87,6 +93,12 @@
 
   &--danger {
     background-color: var(--color-red);
+  }
+
+  &--isTitle {
+    #{$then}__message {
+      color: gray;
+    }
   }
 
   &--info,
