@@ -36,7 +36,7 @@ export const Alert = ({ ...props }: IAlertProps) => {
         <div className={ cx.Children("icon") }>
           { props.icon }
           { props.isIcon && (
-            <i className={ cx.Children("icon", icon) }/>
+            <i className={ icon }/>
           ) }
         </div>
       ) }
@@ -50,14 +50,26 @@ export const Alert = ({ ...props }: IAlertProps) => {
             { props.actions }
           </div>
         ) }
+        { props.data && (
+          <div className={ cx.Children("data") }>
+            { props.data.map((item, index) => {
+              return (
+                <div key={ index } className={ cx.Children("item") }>
+                  <i className={ "fa fa-arrow-right" }/>
+                  { item }
+                </div>
+              );
+            }) }
+          </div>
+        ) }
       </div>
       { (props.isCloseable || props.right) && (
         <div className={ cx.Children("right") }>
           { props.right }
           { props.isCloseable && (
             <span onClick={ props.onCloseable } className={ cx.Children("closeable") }>
-              <i className={ "fa fa-times" }></i>
-            </span>
+          <i className={ "fa fa-times" }/>
+          </span>
           ) }
         </div>
       ) }

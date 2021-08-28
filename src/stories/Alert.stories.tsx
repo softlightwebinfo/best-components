@@ -65,3 +65,14 @@ IsIcon.args = {
   isIcon: true,
   right: (<Button>About us</Button>),
 };
+export const AlertDanger = Template.bind({});
+AlertDanger.args = {
+  message: "Please fix the following errors:",
+  isIcon: true,
+  type: "danger",
+  data: [
+    "Emails is a required field",
+    "Password must have at least 8 character",
+    "Please enter your age",
+  ],
+};

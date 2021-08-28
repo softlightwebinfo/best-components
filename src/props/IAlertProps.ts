@@ -3,6 +3,7 @@ import { IProps } from "../interfaces";
 import { TAlertType } from "../types/TAlertType";
 
 export interface IAlertProps extends IProps {
+  data?: string[];
   type?: TAlertType;
   isIcon?: boolean;
   isCloseable?: boolean;
