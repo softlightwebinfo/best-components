@@ -5,6 +5,7 @@ export * from './Badge';
 export * from './Banner';
 export * from './Breadcrumb';
 export * from './Button';
+export * from './ButtonGroup';
 export * from './ButtonToolbar';
 export * from './Container';
 export * from './Divider';

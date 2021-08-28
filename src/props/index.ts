@@ -4,6 +4,7 @@ export * from './IAvatarStackedProps';
 export * from './IBadgeProps';
 export * from './IBannerProps';
 export * from './IBreadcrumbProps';
+export * from './IButtonGroupProps';
 export * from './IButtonProps';
 export * from './IButtonToolbarProps';
 export * from './IContainerProps';
