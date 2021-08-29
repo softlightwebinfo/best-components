@@ -1,21 +1,21 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Badge } from "../components/Badge/Badge";
+import { Badge } from "../components";
+import { DividerHeading } from "../components/Divider/DividerHeading/DividerHeading";
 
 export default {
-  title: 'Base/Badge/Default',
-  component: Badge,
+  title: 'Base/DividerHeading/Default',
+  component: DividerHeading,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Badge>;
+} as ComponentMeta<typeof DividerHeading>;
 
-const Template: ComponentStory<typeof Badge> = (args) => <Badge { ...args } />;
+const Template: ComponentStory<typeof DividerHeading> = (args) => <DividerHeading { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  label: "Badge",
+  children: "Title",
 };
-export const Icon = Template.bind({});
-Icon.args = {
-  icon: <i className={"fa fa-check"}/>,
-  label: "Badge",
+export const Component = Template.bind({});
+Component.args = {
+  children: <Badge label={"Load more..."}/>,
 };

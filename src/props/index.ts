@@ -15,6 +15,7 @@ export * from './ICardProps';
 export * from './ICardTitleProps';
 export * from './IContainerProps';
 export * from './IContentProps';
+export * from './IDividerHeadingProps';
 export * from './IDividerProps';
 export * from './IDropdownItemProps';
 export * from './IDropdownMenuProps';

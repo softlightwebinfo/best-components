@@ -1,0 +1,22 @@
+.DividerHeading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+
+  > span:first-child {
+    flex: 1;
+    background-color: rgba(229, 231, 235, var(--bg-opacity));
+    height: .125rem;
+  }
+
+  > span:nth-child(2) {
+    border-radius: .25rem;
+    font-size: 1.125rem;
+  }
+
+  > span:last-child {
+    height: .125rem;
+    flex: 1;
+    background-color: rgba(229, 231, 235, var(--bg-opacity));
+  }
+}
