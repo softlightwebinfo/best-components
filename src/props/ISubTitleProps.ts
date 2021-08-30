@@ -1,5 +1,5 @@
 import { IProps } from "../interfaces";
 
-export interface ITitleProps extends IProps {
+export interface ISubTitleProps extends IProps {
 
 }

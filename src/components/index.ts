@@ -1,6 +1,7 @@
 export * from './Alert';
 export * from './Avatar';
 export * from './AvatarStacked';
+export * from './AvatarUser';
 export * from './Badge';
 export * from './Banner';
 export * from './Breadcrumb';
@@ -16,3 +17,6 @@ export * from './Dropdown';
 export * from './Input';
 export * from './Item';
 export * from './Pagination';
+export * from './Subtitle';
+export * from './TitleSubtitle';
+export * from './Titlte';

@@ -1,6 +1,7 @@
 export * from './IAlertProps';
 export * from './IAvatarProps';
 export * from './IAvatarStackedProps';
+export * from './IAvatarUserProps';
 export * from './IBadgeProps';
 export * from './IBannerProps';
 export * from './IBreadcrumbProps';
@@ -23,3 +24,6 @@ export * from './IDropdownProps';
 export * from './IInputProps';
 export * from './IItemProps';
 export * from './IPaginationProps';
+export * from './ISubTitleProps';
+export * from './ITitleProps';
+export * from './ITitleSubtitleProps';

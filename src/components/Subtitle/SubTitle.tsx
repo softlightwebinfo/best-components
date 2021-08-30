@@ -1,11 +1,11 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { ITitleProps } from "../../props/ITitleProps";
+import { ISubTitleProps } from "../../props/ISubTitleProps";
 
-export const Title = (props: ITitleProps) => {
-  const cx = new BEM("Title", {});
+export const SubTitle = (props: ISubTitleProps) => {
+  const cx = new BEM("SubTitle", {});
   cx.Append(props.className);
   return (
-    <h3 className={ cx.toString() } style={ props.style }>{ props.children }</h3>
+    <p className={ cx.toString() } style={ props.style }>{ props.children }</p>
   );
 };
