@@ -3,12 +3,25 @@
   align-items: center;
   border-radius: .25rem;
   padding: .5rem .75rem;
-  font-size: .875rem;
+  font-size: 1rem;
   line-height: 1.25rem;
   color: rgba(75, 85, 99, var(--text-opacity));
 
   &:hover {
     background-color: rgba(243, 244, 246, var(--bg-opacity));
     color: rgba(55, 65, 81, var(--text-opacity));
+  }
+
+  &__icon {
+    margin-right: var(--space-s);
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  + .Item {
+    //margin-top: 0;
+    //margin-bottom: 0;
   }
 }

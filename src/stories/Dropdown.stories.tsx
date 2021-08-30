@@ -1,9 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Button } from "../components";
-import { Divider } from "../components/Divider/Divider";
-import { Dropdown } from "../components/Dropdown/Dropdown";
-import { DropdownItem } from "../components/Dropdown/DropdownItem";
+import { AvatarUser, Button, Divider, Dropdown, DropdownItem } from "../components";
 
 export default {
   title: 'Base/Dropdown/Default',
@@ -22,5 +19,23 @@ const Template: ComponentStory<typeof Dropdown> = (args) => (
     <DropdownItem>SignOut</DropdownItem>
   </Dropdown>
 );
+const Template2: ComponentStory<typeof Dropdown> = (args) => (
+  <Dropdown { ...args } trigger={ <Button>John Doe</Button> }>
+    <DropdownItem>
+      <AvatarUser
+        title={ "John Doe" }
+        subTitle={ "john.doe@example.com" }
+      />
+    </DropdownItem>
+    <DropdownItem icon={ <i className={ "fa fa-envelope" }/> } badge={ "3" }>Notifications</DropdownItem>
+    <DropdownItem  icon={ <i className={ "fa fa-envelope" }/> } badge={ "10" }>Inbox</DropdownItem>
+    <Divider/>
+    <DropdownItem>Settings</DropdownItem>
+    <Divider/>
+    <DropdownItem>SignOut</DropdownItem>
+  </Dropdown>
+);
 export const Default = Template.bind({});
 Default.args = {};
+export const Avatar = Template2.bind({});
+Avatar.args = {};

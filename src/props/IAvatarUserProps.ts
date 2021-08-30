@@ -5,5 +5,5 @@ export interface IAvatarUserProps extends IProps {
   size?: TSize;
   title: string;
   subTitle: string;
-  image: string;
+  image?: string;
 }
