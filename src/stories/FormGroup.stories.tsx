@@ -1,53 +1,27 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Card } from "../components/Card/Card";
-import { CardBody } from "../components/Card/CardBody";
-import { CardFooter } from "../components/Card/CardFooter";
-import { CardHeader } from "../components/Card/CardHeader";
+import { Input } from "../components";
+import { FormGroup } from "../components/FormGroup/FormGroup";
 
 export default {
-  title: 'Base/Card/Grid',
-  component: Card,
+  title: 'Base/FormGroup/Default',
+  component: FormGroup,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Card>;
+} as ComponentMeta<typeof FormGroup>;
 
-const Template: ComponentStory<typeof Card> = (args) => (
-  <div style={ { display: 'flex', gap: 40 } }>
-    <Card { ...args } >
-      <CardHeader>
-        <h3>Card Title</h3>
-      </CardHeader>
-      <CardBody>
-        <p>This is an example card with a header, main content and a footer.</p>
-      </CardBody>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
-    <Card { ...args } >
-      <CardHeader>
-        <h3>Card Title</h3>
-      </CardHeader>
-      <CardBody>
-        <p>This is an example card with a header, main content and a footer.</p>
-      </CardBody>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
-    <Card { ...args } >
-      <CardHeader>
-        <h3>Card Title</h3>
-      </CardHeader>
-      <CardBody>
-        <p>This is an example card with a header, main content and a footer.</p>
-      </CardBody>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
-  </div>
+const Template: ComponentStory<typeof FormGroup> = (args) => (
+  <form>
+    <FormGroup label={ "Text" }>
+      <Input placeholder={ "Enter your name" }/>
+    </FormGroup>
+    <FormGroup label={ "Email" }>
+      <Input placeholder={ "Enter your email" } type={ "email" }/>
+    </FormGroup>
+    <FormGroup label={ "Password" }>
+      <Input placeholder={ "Enter your password" } type={ "password" }/>
+    </FormGroup>
+  </form>
 );
 export const Default = Template.bind({});
 Default.args = {};

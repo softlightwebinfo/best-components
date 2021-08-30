@@ -27,10 +27,17 @@
   @media (min-width: 1024px) {
     padding: 1.5rem;
   }
+
+  &--flex {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .CardTitle {
-  h3 {
+  font-size: 20px;
+
+  h3, & {
     font-size: 20px;
   }
 

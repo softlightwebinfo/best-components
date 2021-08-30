@@ -1,6 +1,6 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { ICardTitleProps } from "../../props/ICardTitleProps";
+import { ICardTitleProps } from "../../props";
 
 export const CardTitle = (props: ICardTitleProps) => {
   const cx = new BEM("CardTitle", {});

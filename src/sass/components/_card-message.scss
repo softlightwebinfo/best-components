@@ -11,10 +11,21 @@
     #{$then}__body {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     #{$then}__title {
       margin: 0;
     }
+  }
+
+  &--noContent {
+    #{$then}__title {
+      margin: 0;
+    }
+  }
+
+  &--noBorder {
+    --card-message-border: transparent;
   }
 }

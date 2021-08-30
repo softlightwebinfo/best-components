@@ -1,12 +1,14 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { ICardMessageProps } from "../../props/ ICardMessageProps";
+import { ICardMessageProps } from "../../props";
 import { Card, CardBody } from "../Card";
 import { TitleSubtitle } from "../TitleSubtitle";
 
 export const CardMessage = (props: ICardMessageProps) => {
   const cx = new BEM("CardMessage", {
     between: props.between,
+    noContent: !props.children,
+    noBorder: props.noBorder,
   });
   cx.Append(props.className);
   return (
