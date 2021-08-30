@@ -1,4 +1,3 @@
 .Divider {
-  background: rgba(243, 244, 246, var(--divide-opacity));
-  height: 1px;
+  border-top: 1px solid rgba(243, 244, 246, var(--divide-opacity));
 }

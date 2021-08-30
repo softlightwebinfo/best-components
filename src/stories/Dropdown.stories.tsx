@@ -28,9 +28,10 @@ const Template2: ComponentStory<typeof Dropdown> = (args) => (
       />
     </DropdownItem>
     <DropdownItem icon={ <i className={ "fa fa-envelope" }/> } badge={ "3" }>Notifications</DropdownItem>
-    <DropdownItem  icon={ <i className={ "fa fa-envelope" }/> } badge={ "10" }>Inbox</DropdownItem>
-    <Divider/>
-    <DropdownItem>Settings</DropdownItem>
+    <DropdownItem icon={ <i className={ "fa fa-envelope" }/> } badge={ "10" }>Inbox</DropdownItem>
+    <Divider>
+      <DropdownItem>Settings</DropdownItem>
+    </Divider>
     <Divider/>
     <DropdownItem>SignOut</DropdownItem>
   </Dropdown>
