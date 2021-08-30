@@ -1,37 +1,76 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Button, ButtonToolbar } from "../components";
-import { Banner } from "../components/Banner/Banner";
+import { Button, ButtonToolbar, Input } from "../components";
+import { CardMessage } from "../components/CardMessage/CardMessage";
 
 export default {
-  title: 'Base/Banner/Default',
-  component: Banner,
+  title: 'Base/CardMessage/Default',
+  component: CardMessage,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Banner>;
+} as ComponentMeta<typeof CardMessage>;
 
-const Template: ComponentStory<typeof Banner> = (args) => <Banner { ...args } />;
+const Template: ComponentStory<typeof CardMessage> = (args) => <CardMessage { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  message: "We just released 2.0 version! Check out the changelog.",
+  title: "Security Step",
+  subTitle: "Could your please re-enter your current password before changing your account's data?",
 };
-export const Placement = Template.bind({});
-Placement.args = {
-  message: "We just released 2.0 version! Check out the changelog.",
-  bannerType: "bubble",
-  placement: "right-bottom",
-};
-export const Cookie = Template.bind({});
-Cookie.args = {
-  message: "This website uses cookies to personalise content and ads, to provide social media features and to" +
-    " analyse our traffic.",
-  title: "We use cookies",
-  placement: "bottom",
-  bannerType: "floating",
-  right: (
+export const InputButton = Template.bind({});
+InputButton.args = {
+  title: "Account Deletion",
+  color: "red",
+  subTitle: "Are your world like to delete your account? Please be careful since this action cannot be undone!",
+  children: (
     <ButtonToolbar>
-      <Button>Manage</Button>
-      <Button>Accept</Button>
+      <Input placeholder={ "Enter current password" }/>
+      <Button>Submit</Button>
     </ButtonToolbar>
+  ),
+};
+export const Buttons = Template.bind({});
+Buttons.args = {
+  title: "Account Deletion",
+  color: "red",
+  subTitle: "Are your world like to delete your account? Please be careful since this action cannot be undone!",
+  children: (
+    <ButtonToolbar>
+      <Button>Delete Account</Button>
+      <Button>Go Back</Button>
+    </ButtonToolbar>
+  ),
+};
+
+export const ButtonsRight = Template.bind({});
+ButtonsRight.args = {
+  title: "Account Deletion",
+  color: "red",
+  between: true,
+  subTitle: "Are your world like to delete your account? Please be careful since this action cannot be undone!",
+  children: (
+    <ButtonToolbar>
+      <Button>Delete Account</Button>
+      <Button>Go Back</Button>
+    </ButtonToolbar>
+  ),
+};
+export const Links = Template.bind({});
+Links.args = {
+  title: "Upgrade to the Agency Plan",
+  color: "var(--color-primary)",
+  subTitle: "Power up your current plan with only 9.99 per month and receive tons of new features including but not" +
+    " limited to:",
+  children: (
+    <div>
+      <ul>
+        <li>10GB storage</li>
+        <li>1TB bandwith</li>
+        <li>Exclusive 24/7 email, phone and chat support</li>
+      </ul>
+      <ButtonToolbar>
+        <Button>Delete Account</Button>
+        <Button>Go Back</Button>
+      </ButtonToolbar>
+    </div>
   ),
 };

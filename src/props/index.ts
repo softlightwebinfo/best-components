@@ -1,3 +1,4 @@
+export * from './ ICardMessageProps';
 export * from './IAlertProps';
 export * from './IAvatarProps';
 export * from './IAvatarStackedProps';

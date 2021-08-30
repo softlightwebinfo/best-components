@@ -10,6 +10,7 @@ export * from './ButtonGroup';
 export * from './ButtonToolbar';
 export * from './Card';
 export * from './CardHeading';
+export * from './CardMessage';
 export * from './Container';
 export * from './Content';
 export * from './Divider';
