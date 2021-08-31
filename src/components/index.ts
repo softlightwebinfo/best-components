@@ -21,5 +21,6 @@ export * from './Item';
 export * from './Label';
 export * from './Pagination';
 export * from './Subtitle';
+export * from './Textarea';
 export * from './TitleSubtitle';
 export * from './Titlte';

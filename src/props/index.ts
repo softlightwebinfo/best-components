@@ -28,5 +28,6 @@ export * from './IItemProps';
 export * from './ILabelProps';
 export * from './IPaginationProps';
 export * from './ISubTitleProps';
+export * from './ITextareaProps';
 export * from './ITitleProps';
 export * from './ITitleSubtitleProps';

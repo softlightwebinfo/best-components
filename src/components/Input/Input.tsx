@@ -1,6 +1,6 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { IInputProps } from "../../props/IInputProps";
+import { IInputProps } from "../../props";
 
 export const Input = ({ type = "text", ...props }: IInputProps) => {
   const cs = new BEM("Input", {});

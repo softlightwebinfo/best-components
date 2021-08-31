@@ -1,8 +1,6 @@
 import { IProps } from "../interfaces";
-import { TInputType } from "../types";
 
-export interface IInputProps extends IProps {
-  type?: TInputType;
+export interface ITextareaProps extends IProps {
   value?: string;
   placeholder?: string;
   disabled?: boolean;

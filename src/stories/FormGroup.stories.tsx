@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Input } from "../components";
-import { FormGroup } from "../components/FormGroup/FormGroup";
+import { FormGroup, Input } from "../components";
+import { Textarea } from "../components/Textarea/Textarea";
 
 export default {
-  title: 'Base/FormGroup/Default',
+  title: 'Form/FormGroup/Default',
   component: FormGroup,
   argTypes: {},
   args: {},
@@ -23,5 +23,16 @@ const Template: ComponentStory<typeof FormGroup> = (args) => (
     </FormGroup>
   </form>
 );
+const Template2: ComponentStory<typeof FormGroup> = (args) => (
+  <form>
+    <FormGroup label={ "Text" }>
+      <Textarea placeholder={ "Enter your name" }/>
+    </FormGroup>
+  </form>
+);
+
 export const Default = Template.bind({});
 Default.args = {};
+
+export const TextareaForm = Template2.bind({});
+TextareaForm.args = {};

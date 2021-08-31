@@ -1,0 +1,4 @@
+.Textarea {
+  @include InputComponent();
+  min-height: 120px;
+}
