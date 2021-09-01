@@ -56,6 +56,10 @@
     --badge-color: var(--color-dark);
   }
 
+  &--transparent {
+    --badge-background-color: transparent;
+  }
+
   &--default {
     --badge-background-color: var(--color-dark);
     --badge-color: var(--color-white);
@@ -64,5 +68,9 @@
   &--danger {
     --badge-background-color: var(--color-red);
     --badge-color: var(--color-white);
+  }
+
+  &--radius {
+    --badge-border-radius: 40px;
   }
 }
