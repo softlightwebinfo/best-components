@@ -11,6 +11,7 @@ export * from './ButtonToolbar';
 export * from './Card';
 export * from './CardHeading';
 export * from './CardMessage';
+export * from './Checkbox';
 export * from './Container';
 export * from './Content';
 export * from './Divider';

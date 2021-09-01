@@ -15,6 +15,7 @@ export * from './ICardHeaderProps';
 export * from './ICardHeadingProps';
 export * from './ICardProps';
 export * from './ICardTitleProps';
+export * from './ICheckboxProps';
 export * from './IContainerProps';
 export * from './IContentProps';
 export * from './IDividerHeadingProps';

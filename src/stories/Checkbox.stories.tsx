@@ -1,23 +1,16 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Avatar } from "../components/Avatar/Avatar";
+import { Checkbox } from "../components/Checkbox/Checkbox";
 
 export default {
-  title: 'Base/Avatar/Default',
-  component: Avatar,
+  title: 'Form/Checkbox/Default',
+  component: Checkbox,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Avatar>;
+} as ComponentMeta<typeof Checkbox>;
 
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar { ...args } />;
+const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  image: "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_640.png",
-  name: "Avatar",
-  alt: "Avatar",
-};
-export const Name = Template.bind({});
-Name.args = {
-  name: "Avatar",
-  alt: "Avatar",
+  label: "Checked",
 };
