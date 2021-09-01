@@ -1,0 +1,32 @@
+.CardList {
+  --card-list-border: 1px solid gainsboro;
+  --card-list-border-radius: var(--border-radius-soft);
+  display: flex;
+  flex-direction: column;
+  border: var(--card-list-border);
+  border-radius: var(--card-list-border-radius);
+
+  > * {
+    padding: 20px;
+  }
+
+  > * + * {
+    border-top: var(--card-list-border);
+  }
+
+  &--noBorder {
+    border: var(--border-radius-none);
+  }
+
+  &--noBorderItems {
+    gap: 20px;
+
+    > * {
+      padding: 0;
+    }
+
+    > * + * {
+      border-top: var(--border-radius-none);
+    }
+  }
+}

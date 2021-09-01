@@ -6,7 +6,7 @@ export interface ICheckboxProps extends IProps {
   hasError?: boolean;
   indeterminate?: boolean;
   checked?: boolean;
-  label: string;
+  label?: string;
   type?: TCheckboxType;
 }
 

@@ -20,7 +20,7 @@ export const Checkbox = (props: ICheckboxProps) => {
         onChange={ props.onChange }
         disabled={ props.disabled }
       />
-      <span className={ cx.Children("label") }>{ props.label }</span>
+      { props.label && <span className={ cx.Children("label") }>{ props.label }</span> }
     </label>
   );
 };
