@@ -2,4 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &--default {
+    justify-content: initial;
+    align-items: initial;
+    gap: var(--space-base);
+  }
 }

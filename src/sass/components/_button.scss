@@ -80,5 +80,6 @@
     background: transparent;
     border: var(--border-size-none);
     @include shadow(none);
+    padding: 0;
   }
 }

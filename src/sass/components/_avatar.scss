@@ -6,6 +6,7 @@
   height: var(--avatar-size);
   width: var(--avatar-size);
   background: var(--avatar-background);
+  flex: 0 0 var(--avatar-size);
 
   img, & {
     border-radius: var(--avatar-radius);
