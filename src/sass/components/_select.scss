@@ -1,0 +1,16 @@
+.Select {
+  position: relative;
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__right {
+    &-icon {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}

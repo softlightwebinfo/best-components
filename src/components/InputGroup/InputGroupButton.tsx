@@ -1,9 +1,9 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { IInputGroupAddonProps } from "../../props/IInputGroupAddonProps";
+import { IInputGroupButtonProps } from "../../props/IInputGroupButtonProps";
 
-export const InputGroupAddon = (props: IInputGroupAddonProps) => {
-  const cx = new BEM("InputGroupAddon", {});
+export const InputGroupButton = (props: IInputGroupButtonProps) => {
+  const cx = new BEM("InputGroupButton", {});
   cx.Append(props.className);
   return (
     <div className={ cx.toString() } style={ props.style }>

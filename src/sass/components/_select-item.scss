@@ -1,0 +1,9 @@
+.SelectItem {
+  &--subItem {
+    padding-left: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

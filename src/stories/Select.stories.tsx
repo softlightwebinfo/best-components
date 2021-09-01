@@ -1,78 +1,132 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Button } from "../components";
-import { Alert } from "../components/Alert/Alert";
-import { ButtonToolbar } from "../components/ButtonToolbar/ButtonToolbar";
+import { Select } from "../components/Select/Select";
 
 export default {
-  title: 'Base/Alert/Default',
-  component: Alert,
+  title: 'Base/Select/Default',
+  component: Select,
   argTypes: {},
-  args: {},
-} as ComponentMeta<typeof Alert>;
+  args: {
+    data: [
+      {
+        "label": "Eugenia",
+        "value": "Eugenia",
+        "role": "Master",
+      },
+      {
+        "label": "Kariane",
+        "value": "Kariane",
+        "role": "Master",
+      },
+      {
+        "label": "Louisa",
+        "value": "Louisa",
+        "role": "Master",
+      },
+      {
+        "label": "Marty",
+        "value": "Marty",
+        "role": "Master",
+      },
+      {
+        "label": "Kenya",
+        "value": "Kenya",
+        "role": "Master",
+      },
+      {
+        "label": "Hal",
+        "value": "Hal",
+        "role": "Developer",
+      },
+      {
+        "label": "Julius",
+        "value": "Julius",
+        "role": "Developer",
+      },
+      {
+        "label": "Travon",
+        "value": "Travon",
+        "role": "Developer",
+      },
+      {
+        "label": "Vincenza",
+        "value": "Vincenza",
+        "role": "Developer",
+      },
+      {
+        "label": "Dominic",
+        "value": "Dominic",
+        "role": "Developer",
+      },
+      {
+        "label": "Pearlie",
+        "value": "Pearlie",
+        "role": "Guest",
+      },
+      {
+        "label": "Tyrel",
+        "value": "Tyrel",
+        "role": "Guest",
+      },
+      {
+        "label": "Jaylen",
+        "value": "Jaylen",
+        "role": "Guest",
+      },
+      {
+        "label": "Rogelio",
+        "value": "Rogelio",
+        "role": "Guest",
+      },
+    ],
+  },
+} as ComponentMeta<typeof Select>;
 
-const Template: ComponentStory<typeof Alert> = (args) => <Alert { ...args } />;
+const Template: ComponentStory<typeof Select> = (args) => <Select { ...args } />;
 export const Default = Template.bind({});
-Default.args = {
-  message: "This is just a reminder to update your personal data.",
+Default.args = {};
+export const Group = Template.bind({});
+Group.args = {
+  groupBy: "role",
 };
-
-export const Right = Template.bind({});
-Right.args = {
-  message: "This is just a reminder to update your personal data.",
-  right: (
-    <a href="">Account</a>
+export const Functions = Template.bind({});
+Functions.args = {
+  groupBy: "role",
+  placeholder: "Select user",
+  renderMenuItem: (label, item) => (
+    <div>
+      <i className={ "fa fa-layout-group" }/> { label }
+    </div>
   ),
+  renderMenuGroup: (label, item) => {
+    return (
+      <div>
+        <i className={ "fa fa-users" }/> { label } - ({ item.children.length })
+      </div>
+    );
+  },
+  renderValue: (value, item) => {
+    return (
+      <div>
+        <span style={ { color: '#868484' } }>
+          <i className={ "fa fa-user" }/> User:
+        </span> { value }
+      </div>
+    );
+  },
 };
-export const Title = Template.bind({});
-Title.args = {
-  title: "It´s time for an update",
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
+export const Block = Template.bind({});
+Block.args = {
+  groupBy: "role",
+  placeholder: "Select user",
+  block: true,
+  button: {},
 };
-export const Actions = Template.bind({});
-Actions.args = {
-  title: "It´s time for an update",
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  actions: (
-    <ButtonToolbar>
-      <Button>Go Back</Button>
-      <Button default>Reinstall</Button>
-    </ButtonToolbar>
-  ),
-};
-export const Type = Template.bind({});
-Type.args = {
-  title: "It´s time for an update",
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  type: "info",
-  actions: (
-    <ButtonToolbar>
-      <Button>Go Back</Button>
-      <Button default>Reinstall</Button>
-    </ButtonToolbar>
-  ),
-};
-export const IsCloseable = Template.bind({});
-IsCloseable.args = {
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  isCloseable: true,
-  right: (<Button>About us</Button>),
-};
-export const IsIcon = Template.bind({});
-IsIcon.args = {
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  isCloseable: true,
-  isIcon: true,
-  right: (<Button>About us</Button>),
-};
-export const AlertDanger = Template.bind({});
-AlertDanger.args = {
-  message: "Please fix the following errors:",
-  isIcon: true,
-  type: "danger",
-  data: [
-    "Emails is a required field",
-    "Password must have at least 8 character",
-    "Please enter your age",
-  ],
+export const Search = Template.bind({});
+Search.args = {
+  groupBy: "role",
+  placeholder: "Select user",
+  block: true,
+  button: {},
+  showSearch: true,
 };

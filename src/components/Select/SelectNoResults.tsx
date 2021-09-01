@@ -1,7 +1,7 @@
 import React from "react";
-import { useSelectContext } from "../../../context/selectContext";
-import { BEM } from "../../../functions";
-import { ISelectNoResultsProps } from "../../../props/ISelectNoResultsProps";
+import { useSelectContext } from "../../context/selectContext";
+import { BEM } from "../../functions";
+import { ISelectNoResultsProps } from "../../props/ISelectNoResultsProps";
 
 export const SelectNoResults = (props: ISelectNoResultsProps) => {
   const context = useSelectContext();
