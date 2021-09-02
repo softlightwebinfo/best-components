@@ -1,7 +1,7 @@
-import {CSSProperties, ReactNode} from "react";
+import { CSSProperties, ReactNode } from "react";
 
 export interface IProps {
-    className?: string;
-    style?: CSSProperties;
-    children?: ReactNode | string;
+  className?: string;
+  style?: CSSProperties;
+  children?: ReactNode | string;
 }

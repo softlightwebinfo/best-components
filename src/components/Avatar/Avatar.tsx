@@ -1,6 +1,6 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { IAvatarProps } from "../../props/IAvatarProps";
+import { IAvatarProps } from "../../props";
 
 export const Avatar = (props: IAvatarProps) => {
   const cx = new BEM("Avatar", {
@@ -26,6 +26,7 @@ export const Avatar = (props: IAvatarProps) => {
     <div className={ cx.toString() } style={ props.style }>
       { props.image && (<img src={ props.image } alt={ props.alt } title={ props.name }/>) }
       { (!props.image && props.name) && (<span>{ nameData() }</span>) }
+      { props.children }
     </div>
   );
 };

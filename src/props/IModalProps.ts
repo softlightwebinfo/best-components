@@ -1,5 +1,5 @@
 import { IProps } from "../interfaces";
 
 export interface IModalProps extends IProps {
-  onClick?: (evt: any) => void;
+  onClose?: (evt: any, ref: any) => void;
 }

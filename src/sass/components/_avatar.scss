@@ -1,12 +1,15 @@
 .Avatar {
   --avatar-size: 35px;
   --avatar-radius: 50%;
-  --avatar-background: transparent;
+  --avatar-background: whitesmoke;
 
   height: var(--avatar-size);
   width: var(--avatar-size);
   background: var(--avatar-background);
   flex: 0 0 var(--avatar-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img, & {
     border-radius: var(--avatar-radius);
