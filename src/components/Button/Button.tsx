@@ -7,6 +7,8 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
     dashed: props.dashed,
     round: props.round,
     default: props.default,
+    primary: props.primary,
+    block: props.block,
     [props.size ?? '']: !!props.size,
     iconChildren: !!(props.icon && !props.children),
   });

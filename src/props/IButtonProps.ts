@@ -4,6 +4,8 @@ import { TButtonType, TOnClick, TSize } from "../types";
 
 export interface IButtonProps extends IProps {
   dashed?: boolean;
+  block?: boolean;
+  primary?: boolean;
   round?: boolean;
   default?: boolean;
   onClick?: TOnClick;

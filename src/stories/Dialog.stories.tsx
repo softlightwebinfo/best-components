@@ -104,6 +104,7 @@ const Template3: ComponentStory<typeof Dialog> = (args) => {
           subTitle={ "Are you sure you want to completely remove Research.docx from your drive?" }
         />
       </Group>
+      <Button style={ { marginTop: 20 } } size={"lg"} block primary>Let's get started</Button>
     </Dialog>
   );
 };

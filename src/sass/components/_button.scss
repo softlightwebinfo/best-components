@@ -82,4 +82,8 @@
     @include shadow(none);
     padding: 0;
   }
+
+  &--block {
+    width: 100%;
+  }
 }
