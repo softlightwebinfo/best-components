@@ -7,9 +7,11 @@
   line-height: 1.25rem;
   color: rgba(75, 85, 99, var(--text-opacity));
 
-  &:hover {
+  &:hover,
+  &--active {
     background-color: rgba(243, 244, 246, var(--bg-opacity));
     color: rgba(55, 65, 81, var(--text-opacity));
+    cursor: pointer;
   }
 
   &__icon {

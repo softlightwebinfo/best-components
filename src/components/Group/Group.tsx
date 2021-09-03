@@ -9,7 +9,7 @@ export const Group = (props: IGroupProps) => {
   });
   cx.Append(props.className);
   return (
-    <div className={ cx.toString() } style={ props.style }>
+    <div className={ cx.toString() } style={ props.style } onClick={ props.onClick }>
       { props.children }
     </div>
   );

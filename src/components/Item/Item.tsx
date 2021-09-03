@@ -4,7 +4,9 @@ import { IItemProps } from "../../props";
 import { Badge } from "../Badge";
 
 export const Item = (props: IItemProps) => {
-  const cx = new BEM("Item", {});
+  const cx = new BEM("Item", {
+    active: props.active,
+  });
   cx.Append(props.className);
   return (
     <div onClick={ props.onClick } className={ cx.toString() } style={ props.style }>
