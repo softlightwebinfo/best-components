@@ -19,6 +19,7 @@ export * from './Dialog';
 export * from './Divider';
 export * from './Dropdown';
 export * from './FormGroup';
+export * from './Grid';
 export * from './Group';
 export * from './Heading';
 export * from './Input';

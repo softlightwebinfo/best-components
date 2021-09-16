@@ -9,6 +9,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
     default: props.default,
     primary: props.primary,
     block: props.block,
+    dark: props.dark,
     [props.size ?? '']: !!props.size,
     iconChildren: !!(props.icon && !props.children),
   });

@@ -1,0 +1,5 @@
+.Grid {
+  --grid-gap: var(--space-s);
+  display: grid;
+  gap: var(--grid-gap);
+}

@@ -1,21 +1,21 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { ICardBodyProps } from "../../props";
+import { ICardImageProps } from "../../props/ICardImageProps";
 
-export const CardBody = (props: ICardBodyProps) => {
-  const cx = new BEM("CardBody", {
-    flex: props.flex,
+export const CardImage = (props: ICardImageProps) => {
+  const cx = new BEM("CardImage", {
+
   });
   cx.Append(props.className);
   return (
-    <section
+    <div
       className={ cx.toString() }
       style={ {
         ...props.style,
-        ...props.gap ? { gap: props.gap } : {},
       } }
     >
+      <img src={ props.src } alt={ props.alt }/>
       { props.children }
-    </section>
+    </div>
   );
 };
