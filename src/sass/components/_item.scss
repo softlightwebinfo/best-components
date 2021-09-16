@@ -9,7 +9,7 @@
 
   &:hover,
   &--active {
-    background-color: rgba(243, 244, 246, var(--bg-opacity));
+    background-color: var(--item-background);
     color: rgba(55, 65, 81, var(--text-opacity));
     cursor: pointer;
   }

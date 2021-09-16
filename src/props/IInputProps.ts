@@ -5,6 +5,9 @@ export interface IInputProps extends IProps {
   type?: TInputType;
   value?: string;
   placeholder?: string;
+  dark?: boolean;
+  rounded?: boolean;
+  search?: boolean;
   disabled?: boolean;
   readOnly?: boolean;
   onChange?: (evt: any) => void;

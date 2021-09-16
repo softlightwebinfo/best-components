@@ -26,6 +26,7 @@ export * from './InputGroup';
 export * from './Item';
 export * from './Label';
 export * from './Modal';
+export * from './Navbar';
 export * from './Navigation';
 export * from './Overlay';
 export * from './Pagination';

@@ -1,0 +1,7 @@
+.NavbarLogo {
+  margin-left: var(--space-base);
+
+  img {
+    height: calc(var(--header-height) - 14px);
+  }
+}

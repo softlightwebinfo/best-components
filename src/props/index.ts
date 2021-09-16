@@ -1,4 +1,5 @@
 export * from './ ICardMessageProps';
+export * from './ INavbarLogoProps';
 export * from './IAlertProps';
 export * from './IAvatarProps';
 export * from './IAvatarStackedProps';
@@ -39,6 +40,9 @@ export * from './IModalFooterProps';
 export * from './IModalHeaderProps';
 export * from './IModalProps';
 export * from './IModalTitleProps';
+export * from './INavbarItemProps';
+export * from './INavbarProps';
+export * from './INavbarRightProps';
 export * from './INavigationProps';
 export * from './IOverlayProps';
 export * from './IPaginationProps';
