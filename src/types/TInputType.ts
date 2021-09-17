@@ -1,1 +1,11 @@
-export type TInputType = "text" | "email" | "tel" | "date" | "password" | "time" | "number" | "color" | "search";
+export type TInputType =
+  "text"
+  | "file"
+  | "email"
+  | "tel"
+  | "date"
+  | "password"
+  | "time"
+  | "number"
+  | "color"
+  | "search";

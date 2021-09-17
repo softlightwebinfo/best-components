@@ -87,18 +87,19 @@ export const Select = (props: ISelectProps) => {
   return (
     <SelectContext.Provider value={ value }>
       <div ref={ ref } className={ cx.toString() } style={ props.style }>
-        <Button
-          { ...props.button }
-          onClick={ () => setOpen(prv => !prv) }
-          className={ cx.Children("button", props?.button?.className) }
-          style={ props.styleButton }
-        >
-          { valueSelect }
-          <div className={ cx.Children("right-icon") }>
-            { select && <i onClick={ onDelete } className={ cx.Children("icon", "fa fa-times") }/> }
-            <i className={ cx.Children("icon", open ? "fa fa-chevron-up" : "fa fa-chevron-down") }/>
-          </div>
-        </Button>
+        <div onClick={ () => setOpen(prv => !prv) }>
+          <Button
+            { ...props.button }
+            className={ cx.Children("button", props?.button?.className) }
+            style={ props.styleButton }
+          >
+            { valueSelect }
+            <div className={ cx.Children("right-icon") }>
+              { select && <i onClick={ onDelete } className={ cx.Children("icon", "fa fa-times") }/> }
+              <i className={ cx.Children("icon", open ? "fa fa-chevron-up" : "fa fa-chevron-down") }/>
+            </div>
+          </Button>
+        </div>
         { open && (
           <SelectMenu>
             <SelectNoResults/>
