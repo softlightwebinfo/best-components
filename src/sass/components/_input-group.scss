@@ -1,0 +1,17 @@
+.InputGroup {
+  display: flex;
+
+  input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &Addon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gainsboro;
+    min-width: 40px;
+    flex: 1;
+  }
+}

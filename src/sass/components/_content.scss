@@ -1,0 +1,15 @@
+.Content {
+  &--noContent {
+    border: 2px dashed gainsboro;
+    width: 100%;
+    min-height: 400px;
+    border-radius: var(--border-radius-soft);
+    background: rgba(249, 250, 251, var(--bg-opacity));
+    font-size: 30px;
+    color: gray;
+  }
+
+  &--isCenter {
+    @include flex();
+  }
+}

@@ -1,0 +1,9 @@
+.Breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  a {
+    margin-right: var(--space-s);
+  }
+}

@@ -1,0 +1,26 @@
+.Navigation {
+  .Heading {
+    padding-left: 10px;
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-m);
+  }
+
+  &__arrow {
+    margin-left: var(--space-m);
+  }
+
+  &__icon {
+    width: 30px;
+    display: inline-block;
+  }
+
+  .Item {
+    &--active {
+      + .Navigation {
+        .Item {
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}

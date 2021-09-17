@@ -1,0 +1,107 @@
+@import "../vars";
+
+@mixin flex($inline: false) {
+  @if ($inline) {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin baseFlex($inline: false) {
+  @if ($inline) {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+}
+
+@mixin device-up($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @if if(0 != $min, $min, null) {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin create-mq($breakpoint) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (max-width: $breakpoint *1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid__cols, $breakpoint) {
+  @include create-mq($breakpoint) {
+    @for $i from 1 through $grid__cols {
+      .col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin gridGenerator($breakpoint, $offset: false) {
+  /*------------------------------------*\
+  # COLUMNS
+  \*------------------------------------*/
+  @for $column from 1 to $columns+1 {
+    .col-#{$breakpoint}-#{$column} {
+      // flex-basis: percentage($column / $columns-number);
+      width: (100% * $column) / $columns;
+    }
+  }
+
+  /*------------------------------------*\
+  # OFFSET COLUMNS
+  \*------------------------------------*/
+  @if $offset {
+    @for $column from 1 to $columns+1 {
+      .col-#{$breakpoint}-offset-#{$column} {
+        margin-left: (100% * $column) / $columns;
+      }
+    }
+  }
+}

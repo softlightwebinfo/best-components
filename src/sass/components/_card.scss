@@ -1,0 +1,70 @@
+.Card {
+  @include shadow(var(--shadow-xs));
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.CardHeader {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(249, 250, 251, var(--bg-opacity));
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 1024px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.CardBody {
+  flex-grow: 1;
+  width: 100%;
+  padding: 1.25rem;
+  @media (min-width: 1024px) {
+    padding: 1.5rem;
+  }
+
+  &--flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.CardTitle {
+  font-size: 20px;
+
+  h3, & {
+    font-size: 20px;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 16px;
+    color: gray;
+    margin-top: var(--space-xs);
+  }
+}
+
+.CardFooter {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(249, 250, 251, var(--bg-opacity));
+  width: 100%;
+  @media (min-width: 1024px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.CardImage {
+  position: relative;
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}

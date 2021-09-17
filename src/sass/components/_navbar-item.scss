@@ -1,0 +1,10 @@
+.NavbarItem {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  color: var(--item-color);
+
+  &:hover {
+    text-decoration: none;
+  }
+}

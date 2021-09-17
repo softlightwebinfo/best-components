@@ -1,0 +1,19 @@
+.Dropdown {
+  $then: &;
+  @include baseFlex(true);
+  flex-direction: column;
+  position: relative;
+
+  &__menu {
+    position: absolute;
+    margin-top: .5rem;
+    left: 0;
+    top: 100%;
+    min-width: 12rem;
+
+    #{$then}--bottom-left & {
+      right: 0;
+      left: initial;
+    }
+  }
+}

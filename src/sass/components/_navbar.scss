@@ -1,0 +1,18 @@
+.Navbar {
+  &__content {
+    gap: var(--space-default);
+    height: var(--header-height);
+    background-color: var(--header-background);
+    position: relative;
+    display: flex;
+    box-shadow: var(--shadow-xs), inset 0 0 0 0 black;
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+}

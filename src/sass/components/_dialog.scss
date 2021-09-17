@@ -1,0 +1,11 @@
+.Dialog {
+  display: none;
+
+  .Modal {
+    margin: auto;
+  }
+
+  &--open {
+    display: block;
+  }
+}

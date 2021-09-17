@@ -1,0 +1,28 @@
+.Item {
+  @include baseFlex();
+  align-items: center;
+  border-radius: .25rem;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: rgba(75, 85, 99, var(--text-opacity));
+
+  &:hover,
+  &--active {
+    background-color: var(--item-background);
+    color: rgba(55, 65, 81, var(--text-opacity));
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: var(--space-s);
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  + .Item {
+    margin-top: 0;
+  }
+}

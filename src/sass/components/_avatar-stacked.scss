@@ -1,0 +1,12 @@
+.AvatarStacked {
+  display: flex;
+  align-items: center;
+
+  .Avatar {
+    border: 2px solid gainsboro;
+
+    + .Avatar {
+      margin-left: -15px;
+    }
+  }
+}

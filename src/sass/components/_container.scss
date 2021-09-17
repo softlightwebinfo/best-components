@@ -1,0 +1,21 @@
+.Container {
+  @include ContainerFixed;
+  @media screen and(min-width: $containerMedia_xss) {
+    width: $container-sm;
+  }
+  @media screen and(min-width: $containerMedia_xs) {
+    width: $container-sm;
+  }
+  @media screen and(min-width: $containerMedia_md) {
+    width: $container-md;
+  }
+  @media screen and(min-width: $containerMedia_lg) {
+    width: $container-lg;
+  }
+  @media screen and(min-width: $containerMedia_llg) {
+    width: $container-llg;
+  }
+  @media screen and(min-width: $containerMedia_xl) {
+    width: $container-xl;
+  }
+}

@@ -1,0 +1,36 @@
+.Modal {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: var(--border-radius-soft);
+}
+
+.ModalHeader {
+  background-color: #f9fafb;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__closeable {
+    cursor: pointer;
+  }
+}
+
+.ModalBody {
+  padding: 20px;
+}
+
+.ModalFooter {
+  background-color: #f9fafb;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__closeable {
+    cursor: pointer;
+  }
+}

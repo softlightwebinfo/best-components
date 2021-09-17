@@ -1,0 +1,41 @@
+.Input {
+  $then: &;
+  position: relative;
+
+  input {
+    @include InputComponent();
+  }
+
+  &--dark {
+    input {
+      background: var(--item-background);
+      color: var(--item-color);
+    }
+
+    #{$then}__icon {
+      color: var(--item-color);
+    }
+  }
+
+  &--rounded {
+    input {
+      border-radius: 100px;
+    }
+  }
+
+  &--search {
+    input {
+      padding-left: 30px;
+    }
+
+    #{$then}__icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 10px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

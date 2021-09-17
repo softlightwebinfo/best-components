@@ -1,0 +1,31 @@
+.CardMessage {
+  $then: &;
+  --card-message-border: var(--color-success-2);
+  border-left: 4px solid var(--card-message-border);
+
+  &__title {
+    margin-bottom: var(--space-m);
+  }
+
+  &--between {
+    #{$then}__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #{$then}__title {
+      margin: 0;
+    }
+  }
+
+  &--noContent {
+    #{$then}__title {
+      margin: 0;
+    }
+  }
+
+  &--noBorder {
+    --card-message-border: transparent;
+  }
+}
