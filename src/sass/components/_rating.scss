@@ -1,0 +1,23 @@
+.Rating {
+  $then: &;
+  --rating-gap: var(--space-xs);
+  display: inline-flex;
+  gap: var(--rating-gap);
+
+  &__icon {
+    display: block;
+    position: relative;
+    color: #bebebe;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    -webkit-transition: color 0.3s linear;
+    transition: color 0.3s linear;
+
+    &--active {
+      color: #1d1d1d;
+      cursor: pointer;
+    }
+  }
+}

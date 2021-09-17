@@ -1,0 +1,12 @@
+.Keypad {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: calc(var(--keypad-button-size) * 3);
+
+  &__button {
+    flex: var(--keypad-button-size);
+    width: var(--keypad-button-size);
+    height: var(--keypad-button-size);
+    padding: 0;
+  }
+}

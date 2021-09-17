@@ -1,14 +1,14 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Keypad } from "../components/Keypad/Keypad";
+import { Rating } from "../components/Rating/Rating";
 
 export default {
-  title: 'Base/Keypad/Default',
-  component: Keypad,
+  title: 'Base/Rating/Default',
+  component: Rating,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Keypad>;
+} as ComponentMeta<typeof Rating>;
 
-const Template: ComponentStory<typeof Keypad> = (args) => <Keypad { ...args } />;
+const Template: ComponentStory<typeof Rating> = (args) => <Rating { ...args } />;
 export const Default = Template.bind({});
 Default.args = {};

@@ -1,14 +1,16 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Rating } from "../components/Rating/Rating";
+import { Fab } from "../components/Fab/Fab";
 
 export default {
-  title: 'Base/Rating/Default',
-  component: Rating,
+  title: 'Base/Fab/Default',
+  component: Fab,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Rating>;
+} as ComponentMeta<typeof Fab>;
 
-const Template: ComponentStory<typeof Rating> = (args) => <Rating { ...args } />;
+const Template: ComponentStory<typeof Fab> = (args) => <Fab { ...args } />;
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  icon: <i className={ "fa fa-plus" }/>,
+};
