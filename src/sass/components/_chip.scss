@@ -1,0 +1,16 @@
+.Chip {
+  --chip-close-background: #66707a;
+  border-radius: 2090px;
+
+  &__close {
+    margin-left: var(--space-s);
+    color: #d6d6d6;
+    background-color: var(--chip-close-background);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

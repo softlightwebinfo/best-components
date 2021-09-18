@@ -19,6 +19,7 @@ export * from './ICardListProps';
 export * from './ICardProps';
 export * from './ICardTitleProps';
 export * from './ICheckboxProps';
+export * from './IChipProps';
 export * from './IContainerProps';
 export * from './IContentProps';
 export * from './IDialogProps';

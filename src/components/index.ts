@@ -13,6 +13,7 @@ export * from './CardHeading';
 export * from './CardList';
 export * from './CardMessage';
 export * from './Checkbox';
+export * from './Chip';
 export * from './Container';
 export * from './Content';
 export * from './Dialog';
