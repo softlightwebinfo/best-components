@@ -1,0 +1,27 @@
+.DescriptionsItem {
+  --descriptions-item-gap: var(--space-s);
+
+  &__label {
+    font-weight: bold;
+  }
+
+  &--horizontal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--descriptions-item-gap);
+  }
+
+  &--vertical {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--descriptions-item-gap);
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

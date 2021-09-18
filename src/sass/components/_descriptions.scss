@@ -1,0 +1,19 @@
+.Descriptions {
+  --descriptions-gap: var(--space-s);
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--descriptions-gap);
+  align-items: flex-start;
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      position: relative;
+
+      .DescriptionsItem {
+        flex: 0 calc(100% / #{$i});
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+}

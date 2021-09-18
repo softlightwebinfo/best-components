@@ -1,0 +1,37 @@
+.PageHeader {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: var(--space-s);
+
+    .Title {
+      font-size: 25px;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: var(--space-s);
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+  }
+
+  &__icon {
+    font-size: 22px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    margin-top: var(--space-m);
+  }
+}
