@@ -1,0 +1,31 @@
+.TimePicker {
+  --time-picker-column: 56px;
+  --time-picker-height: 224px;
+  display: inline-flex;
+  flex-direction: column;
+  width: calc((var(--time-picker-column) + 10px) * 3);
+
+  &__content {
+    display: inline-flex;
+    gap: var(--space-s);
+    height: var(--time-picker-height);
+    flex: auto;
+  }
+
+  &__item {
+    flex: 0 0 var(--time-picker-column);
+    border-right: 1px solid gainsboro;
+    overflow: auto;
+    text-align: center;
+
+    > div {
+
+    }
+  }
+
+  &__footer {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: var(--space-sm);
+  }
+}
