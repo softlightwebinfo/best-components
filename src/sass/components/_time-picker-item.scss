@@ -1,31 +1,18 @@
-.TimePicker {
-  --time-picker-column: 56px;
-  --time-picker-height: 224px;
-  display: inline-flex;
-  flex-direction: column;
-  width: calc((var(--time-picker-column) + 10px) * 3);
+.TimePickerItem {
+  --time-picker-item-background: #e6f7ff;
+  height: 28px;
+  color: #000000d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
 
-  &__content {
-    display: inline-flex;
-    gap: var(--space-s);
-    height: var(--time-picker-height);
-    flex: auto;
+  &:hover {
+    cursor: pointer;
+    background: var(--time-picker-item-background);
   }
 
-  &__item {
-    flex: 0 0 var(--time-picker-column);
-    border-right: 1px solid gainsboro;
-    overflow: auto;
-    text-align: center;
-
-    > div {
-
-    }
-  }
-
-  &__footer {
-    display: inline-flex;
-    justify-content: space-between;
-    padding: var(--space-sm);
+  &--active {
+    background: var(--time-picker-item-background);
   }
 }

@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof TimePicker>;
 
 const Template: ComponentStory<typeof TimePicker> = (args) => (
-  <Card>
+  <Card style={{display: 'inline-flex'}}>
     <TimePicker { ...args } />
   </Card>
 );
