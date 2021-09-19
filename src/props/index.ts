@@ -65,5 +65,6 @@ export * from './ISelectNoResultsProps';
 export * from './ISelectProps';
 export * from './ISubTitleProps';
 export * from './ITextareaProps';
+export * from './ITimePickerProps';
 export * from './ITitleProps';
 export * from './ITitleSubtitleProps';

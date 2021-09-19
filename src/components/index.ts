@@ -40,5 +40,6 @@ export * from './Rating';
 export * from './Select';
 export * from './Subtitle';
 export * from './Textarea';
+export * from './TimePicker';
 export * from './TitleSubtitle';
 export * from './Titlte';
