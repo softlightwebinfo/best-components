@@ -24,9 +24,11 @@ export const PageHeader = (props: IPageHeaderProps) => {
         </div>
         <div className={ cx.Children("extra") }>{ props.extra }</div>
       </header>
-      <div className={ cx.Children("content") }>
-        {props.children}
-      </div>
+      { props.children && (
+        <div className={ cx.Children("content") }>
+          { props.children }
+        </div>
+      ) }
     </section>
   );
 };

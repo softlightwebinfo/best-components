@@ -1,0 +1,41 @@
+.PageHeading {
+  --page-heading-height: 400px;
+  --page-heading-background: "url()";
+  --page-heading-background-size: cover;
+  --page-heading-opacity: 1;
+  height: var(--page-heading-height);
+  position: relative;
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    background-image: var(--page-heading-background);
+    background-size: var(--page-heading-background-size);
+    opacity: var(--page-heading-opacity);
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .Title {
+    font-size: 40px;
+    margin-bottom: var(--space-s);
+  }
+
+  .SubTitle {
+    color: black;
+    font-size: 25px;
+  }
+}

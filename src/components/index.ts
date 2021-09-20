@@ -35,6 +35,7 @@ export * from './Navbar';
 export * from './Navigation';
 export * from './Overlay';
 export * from './PageHeader';
+export * from './PageHeading';
 export * from './Pagination';
 export * from './Rating';
 export * from './Select';
