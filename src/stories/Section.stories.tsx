@@ -1,37 +1,81 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Button, ButtonToolbar } from "../components";
-import { Banner } from "../components/Banner/Banner";
+import { Avatar, Button, ButtonToolbar, Container, Grid, GridItem, SubTitle, Title } from "../components";
+import { Center } from "../components/Center/Center";
+import { Section } from "../components/Section/Section";
 
 export default {
-  title: 'Base/Banner/Default',
-  component: Banner,
+  title: 'Base/Section/Default',
+  component: Section,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Banner>;
+} as ComponentMeta<typeof Section>;
 
-const Template: ComponentStory<typeof Banner> = (args) => <Banner { ...args } />;
+const Template: ComponentStory<typeof Section> = (args) => <Section { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  message: "We just released 2.0 version! Check out the changelog.",
-};
-export const Placement = Template.bind({});
-Placement.args = {
-  message: "We just released 2.0 version! Check out the changelog.",
-  bannerType: "bubble",
-  placement: "right-bottom",
-};
-export const Cookie = Template.bind({});
-Cookie.args = {
-  message: "This website uses cookies to personalise content and ads, to provide social media features and to" +
-    " analyse our traffic.",
-  title: "We use cookies",
-  placement: "bottom",
-  bannerType: "floating",
-  right: (
-    <ButtonToolbar>
-      <Button>Manage</Button>
-      <Button>Accept</Button>
-    </ButtonToolbar>
+  title: "Fully Responsive UI Components",
+  subTitle: "Carefully coded and tested. You can use them to build the UI of your web project without ever leaving" +
+    " your HTML.",
+  children: (
+    <Container style={ { maxWidth: 900 } }>
+      <Grid cols={ 2 } gap={ 60 }>
+        <GridItem>
+          <ButtonToolbar>
+            <Avatar size="xxl"/>
+            <div>
+              <Title className="mb-4">Framework Agnostic</Title>
+              <SubTitle>
+                Carefully coded and tested. You can use them to build the UI of your web project without ever leaving
+                your
+                HTML
+              </SubTitle>
+            </div>
+          </ButtonToolbar>
+        </GridItem>
+        <GridItem>
+          <ButtonToolbar>
+            <Avatar size="xxl"/>
+            <div>
+              <Title className="mb-4">Framework Agnostic</Title>
+              <SubTitle>
+                Carefully coded and tested. You can use them to build the UI of your web project without ever leaving
+                your
+                HTML
+              </SubTitle>
+            </div>
+          </ButtonToolbar>
+        </GridItem>
+        <GridItem>
+          <ButtonToolbar>
+            <Avatar size="xxl"/>
+            <div>
+              <Title className="mb-4">Framework Agnostic</Title>
+              <SubTitle>
+                Carefully coded and tested. You can use them to build the UI of your web project without ever leaving
+                your
+                HTML
+              </SubTitle>
+            </div>
+          </ButtonToolbar>
+        </GridItem>
+        <GridItem>
+          <ButtonToolbar>
+            <Avatar size="xxl"/>
+            <div>
+              <Title className="mb-4">Framework Agnostic</Title>
+              <SubTitle>
+                Carefully coded and tested. You can use them to build the UI of your web project without ever leaving
+                your
+                HTML
+              </SubTitle>
+            </div>
+          </ButtonToolbar>
+        </GridItem>
+      </Grid>
+      <Center style={ { margin: 80 } }>
+        <Button size={ "lg" }>Live Preview</Button>
+      </Center>
+    </Container>
   ),
 };

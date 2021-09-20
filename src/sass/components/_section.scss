@@ -1,0 +1,23 @@
+.Section {
+  --section-padding: 80px;
+  --section-background-color: white;
+  --section-font-size: var(--font-size-display);
+  --section-font-subtitle-size: var(--font-size-h4);
+  background-color: var(--section-background-color);
+
+  &__header {
+    padding: var(--section-padding);
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+
+    .Title {
+      font-size: var(--section-font-size);
+      margin-bottom: var(--space-m);
+    }
+
+    .SubTitle {
+      font-size: var(--section-font-subtitle-size);
+    }
+  }
+}

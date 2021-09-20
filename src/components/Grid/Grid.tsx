@@ -10,7 +10,8 @@ export const Grid = (props: IGridProps) => {
       className={ cx.toString() }
       style={ {
         ...props.style,
-        gridTemplateColumns: `repeat(${props.cols}, 1fr)`,
+        gridTemplateColumns: `repeat(${ props.cols }, 1fr)`,
+        gap: props.gap,
       } }
     >
       { props.children }
