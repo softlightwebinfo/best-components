@@ -35,6 +35,7 @@ export * from './Modal';
 export * from './Navbar';
 export * from './Navigation';
 export * from './Overlay';
+export * from './PageError';
 export * from './PageHeader';
 export * from './PageHeading';
 export * from './Pagination';

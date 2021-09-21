@@ -54,6 +54,7 @@ export * from './INavbarProps';
 export * from './INavbarRightProps';
 export * from './INavigationProps';
 export * from './IOverlayProps';
+export * from './IPageErrorProps';
 export * from './IPageHeaderProps';
 export * from './IPageHeadingProps';
 export * from './IPaginationProps';

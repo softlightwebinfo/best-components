@@ -1,21 +1,24 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Badge } from "../components/Badge/Badge";
+import { Button } from "../components";
+import { PageError } from "../components/PageError/PageError";
 
 export default {
-  title: 'Base/Badge/Default',
-  component: Badge,
+  title: 'Base/PageError/Default',
+  component: PageError,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Badge>;
+  layout: 'fullscreen',
+} as ComponentMeta<typeof PageError>;
 
-const Template: ComponentStory<typeof Badge> = (args) => <Badge { ...args } />;
+const Template: ComponentStory<typeof PageError> = (args) => <PageError { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  label: "Badge",
-};
-export const Icon = Template.bind({});
-Icon.args = {
-  icon: <i className={"fa fa-check"}/>,
-  label: "Badge",
+  code: 404,
+  title: "Error Occured",
+  description: "We are sorry but your request contains bad syntax and cannot be fyllied.",
+  color: true,
+  children: (
+    <Button icon={ <i className={ "fa fa-arrow-left" }/> } size={ "lg" }>Back to Dashboard</Button>
+  ),
 };
