@@ -66,9 +66,10 @@ export const Select = (props: ISelectProps) => {
       props?.onSelect?.(value, item);
       setOpen(false);
       setSelect(item);
+      console.log(value, item, open);
     },
   };
-
+  console.log(open);
   const Content = () => (
     <>
       <span>{ select ? select.label : props.placeholder ?? "Select" }</span>

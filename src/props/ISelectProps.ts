@@ -14,4 +14,5 @@ export interface ISelectProps extends IProps, ISelectMethod {
   placeholder?: string;
   block?: boolean;
   initialSelect?: ISelectPickerData | any | undefined;
+  clickClose?: boolean;
 }

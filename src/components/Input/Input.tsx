@@ -29,6 +29,7 @@ export const Input = ({ type = "text", ...props }: IInputProps) => {
         placeholder={ props.placeholder }
         disabled={ props.disabled }
         readOnly={ props.readOnly }
+        required={props.required}
       />
     </div>
   );
