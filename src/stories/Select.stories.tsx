@@ -83,6 +83,13 @@ export default {
 } as ComponentMeta<typeof Select>;
 
 const Template: ComponentStory<typeof Select> = (args) => <Select { ...args } />;
+const Template2: ComponentStory<typeof Select> = (args) => (
+  <>
+    <Select { ...args } />
+    <Select { ...args } />
+    <Select { ...args } />
+  </>
+);
 export const Default = Template.bind({});
 Default.args = {};
 export const Group = Template.bind({});
@@ -130,3 +137,5 @@ Search.args = {
   button: {},
   showSearch: true,
 };
+export const Default2 = Template2.bind({});
+Default2.args = {};

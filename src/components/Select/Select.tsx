@@ -63,7 +63,6 @@ export const Select = (props: ISelectProps) => {
     renderValue: props.renderValue,
     block: props.block,
     onSelect: (value: string, item: any) => {
-      console.log("Click");
       props?.onSelect?.(value, item);
       setOpen(false);
       setSelect(item);
@@ -93,7 +92,7 @@ export const Select = (props: ISelectProps) => {
             { ...props.button }
             className={ cx.Children("button", props?.button?.className) }
             style={ props.styleButton }
-            onClick={ () => setOpen(prv => !prv) }
+            onClick={ () => setOpen(!open) }
           >
             { valueSelect }
             <div className={ cx.Children("right-icon") }>
