@@ -63,13 +63,13 @@ export const Select = (props: ISelectProps) => {
     renderValue: props.renderValue,
     block: props.block,
     onSelect: (value: string, item: any) => {
+      console.log("Click");
       props?.onSelect?.(value, item);
       setOpen(false);
       setSelect(item);
-      console.log(value, item, open);
     },
   };
-  console.log(open);
+
   const Content = () => (
     <>
       <span>{ select ? select.label : props.placeholder ?? "Select" }</span>
@@ -88,11 +88,12 @@ export const Select = (props: ISelectProps) => {
   return (
     <SelectContext.Provider value={ value }>
       <div ref={ ref } className={ cx.toString() } style={ props.style }>
-        <div onClick={ () => setOpen(prv => !prv) }>
+        <div>
           <Button
             { ...props.button }
             className={ cx.Children("button", props?.button?.className) }
             style={ props.styleButton }
+            onClick={ () => setOpen(prv => !prv) }
           >
             { valueSelect }
             <div className={ cx.Children("right-icon") }>

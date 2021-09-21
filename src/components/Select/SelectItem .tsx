@@ -11,6 +11,7 @@ export const SelectItem = (props: ISelectItemProps) => {
     subItem: props.subItem,
     select: context.select,
   });
+
   cx.Append(props.className);
 
   const onClick = () => {
