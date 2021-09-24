@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { IProps } from "../interfaces";
 import { TSize } from "../types";
 
@@ -6,4 +7,5 @@ export interface IAvatarUserProps extends IProps {
   title: string;
   subTitle: string;
   image?: string;
+  content?: ReactNode;
 }

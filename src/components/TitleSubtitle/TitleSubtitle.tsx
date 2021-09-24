@@ -11,6 +11,7 @@ export const TitleSubtitle = (props: ITitleSubtitleProps) => {
     <div className={ cx.toString() } style={ props.style }>
       <Title>{ props.title }</Title>
       <SubTitle className={ cx.Children("subTitle") }>{ props.subTitle }</SubTitle>
+      { props.children }
     </div>
   );
 };
