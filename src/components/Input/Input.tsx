@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { BEM } from "../../functions";
 import { IInputProps } from "../../props";
 
-export const Input = ({ type = "text", ...props }: IInputProps) => {
+export const Input = forwardRef(({ type = "text", ...props }: IInputProps, ref: any) => {
   const cs = new BEM("Input", {
     search: props.search,
     rounded: props.rounded,
@@ -29,8 +29,10 @@ export const Input = ({ type = "text", ...props }: IInputProps) => {
         placeholder={ props.placeholder }
         disabled={ props.disabled }
         readOnly={ props.readOnly }
-        required={props.required}
+        required={ props.required }
+        autoFocus={ props.autoFocus }
+        ref={ ref }
       />
     </div>
   );
-};
+});

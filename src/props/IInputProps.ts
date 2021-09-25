@@ -11,5 +11,6 @@ export interface IInputProps extends IProps {
   disabled?: boolean;
   readOnly?: boolean;
   required?: boolean;
+  autoFocus?: boolean;
   onChange?: (evt: any) => void;
 }
