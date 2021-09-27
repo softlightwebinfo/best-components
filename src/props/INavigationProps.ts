@@ -10,7 +10,7 @@ export interface INavigationProps extends IProps {
 export type TNavigationData = {
   key?: string;
   heading?: string;
-  label?: string;
+  label?: string | ReactNode;
   icon?: ReactNode;
   badge?: string;
   menu?: TNavigationData[];
