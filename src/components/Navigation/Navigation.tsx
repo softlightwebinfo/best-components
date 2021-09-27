@@ -46,7 +46,7 @@ export const Navigation = (props: INavigationProps) => {
               </Group>
             </Item>
             { (value.menu && openData) && (
-              <Navigation data={ value.menu }/>
+              <Navigation onSelect={ props.onSelect } initialOpen={ props.initialOpen } data={ value.menu }/>
             ) }
           </Fragment>
         );
