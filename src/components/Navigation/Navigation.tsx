@@ -12,6 +12,7 @@ export const Navigation = (props: INavigationProps) => {
   const [open, setOpen] = useState(props.initialOpen ?? []);
 
   const onSelect = (value: TNavigationData) => {
+    if (value?.noClick) return;
     if (value.key && value.menu) {
       if (open.includes(value.key)) {
         setOpen(p => p.filter(i => i != value.key));
@@ -46,7 +47,7 @@ export const Navigation = (props: INavigationProps) => {
               </Group>
             </Item>
             { (value.menu && openData) && (
-              <Navigation onSelect={ props.onSelect } initialOpen={ props.initialOpen } data={ value.menu }/>
+              <Navigation onSelect={ onSelect } initialOpen={ props.initialOpen } data={ value.menu }/>
             ) }
           </Fragment>
         );

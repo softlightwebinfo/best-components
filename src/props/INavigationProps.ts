@@ -14,4 +14,5 @@ export type TNavigationData = {
   icon?: ReactNode;
   badge?: string;
   menu?: TNavigationData[];
+  noClick?: boolean;
 };
