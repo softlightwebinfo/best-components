@@ -1,0 +1,46 @@
+.Page {
+  $column: 500px;
+  --page-column: #{$column} 1fr;
+  --page-column-reverse: 1fr #{$column};
+  --page-order: 0;
+  --page-right-display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: var(--page-column);
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__left {
+    height: 100%;
+    order: var(--page-order);
+  }
+
+  &__right {
+    height: 100%;
+    display: var(--page-right-display);
+  }
+
+  &--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--reverse {
+    --page-column: var(--page-column-reverse);
+    --page-order: 1;
+  }
+
+  @media (max-width: 500px) {
+    --page-right-display: none;
+    --page-column: 1fr;
+  }
+}

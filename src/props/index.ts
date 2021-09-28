@@ -57,6 +57,7 @@ export * from './IOverlayProps';
 export * from './IPageErrorProps';
 export * from './IPageHeaderProps';
 export * from './IPageHeadingProps';
+export * from './IPageProps';
 export * from './IPaginationProps';
 export * from './IRatingProps';
 export * from './ISectionProps';
