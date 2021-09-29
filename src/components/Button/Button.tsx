@@ -23,7 +23,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
       className={ cx.toString() }
     >
       { props.icon && (<span className={ cx.Children("icon") }>{ props.icon }</span>) }
-      { props.children }
+      <span className={cx.Children("content")}>{ props.children }</span>
     </button>
   );
 };
