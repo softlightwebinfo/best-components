@@ -17,9 +17,19 @@ export const Dropdown = (props: IDropdownProps) => {
     if (open) toggle(false);
   });
 
+  const onClick = (): any => {
+    toggle(!open);
+  };
+
   return (
     <div className={ cx.toString() } ref={ wrapperRef }>
-      <span onClick={ () => toggle(!open) }>{ props.trigger }</span>
+      <span
+        onClick={ (prv) => {
+          props.onClick?.(prv, onClick) ?? onClick();
+        } }
+      >
+        { props.trigger }
+      </span>
       { open && (
         <DropdownMenu className={ cx.Children("menu") }>
           { props.children }
