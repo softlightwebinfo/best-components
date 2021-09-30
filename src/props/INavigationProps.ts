@@ -7,7 +7,7 @@ export interface INavigationProps extends IProps {
   onSelect?: (value: TNavigationData) => void;
 }
 
-export type TNavigationData = {
+export type TNavigationData = IProps & {
   key?: string;
   heading?: string;
   label?: string | ReactNode;

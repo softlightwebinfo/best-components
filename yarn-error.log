@@ -2,7 +2,7 @@ Arguments:
   /home/rafa/.nvm/versions/node/v16.6.1/bin/node /usr/local/bin/yarn publish --access public
 
 PATH: 
-  /home/rafa/.nvm/versions/node/v16.6.1/bin:/home/rafa/IdeaProjects/best-components/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+  /home/rafa/.nvm/versions/node/v16.6.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 
 Yarn version: 
   1.22.11
@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "@codeunic/best-components",
-    "version": "0.23.0",
+    "version": "0.32.2",
     "description": "The project was developer for anyone people need the  react components.",
     "main": "lib/index.js",
     "module": "lib/index.esm.js",

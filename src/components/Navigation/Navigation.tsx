@@ -33,7 +33,7 @@ export const Navigation = (props: INavigationProps) => {
 
         return (
           <Fragment key={ index }>
-            <Item active={ openData }>
+            <Item active={ openData } className={ value.className } style={ value.style }>
               <Group onClick={ () => onSelect(value) }>
                 <span>
                   { value.icon && (<span className={ cx.Children("icon") }>{ value.icon }</span>) }
