@@ -1,9 +1,9 @@
 import { createContext, useContext } from "react";
 
-export interface IModalContext {
+export interface IDrawerContext {
   open?: boolean;
-  onClose?: (evt: any) => any;
+  onClose?: () => any;
 }
 
-export const ModalContext = createContext<IModalContext>({});
-export const useModalContext = () => useContext(ModalContext);
+export const DrawerContext = createContext<IDrawerContext>({});
+export const useDrawerContext = () => useContext(DrawerContext);

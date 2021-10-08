@@ -1,0 +1,12 @@
+.DrawerHeader {
+  --drawer-header-background: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding: var(--drawer-padding);
+  background: var(--drawer-header-background);
+
+  > span {
+    margin-left: auto;
+    cursor: pointer;
+  }
+}

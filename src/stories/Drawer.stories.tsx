@@ -1,88 +1,170 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
-import { Button, ButtonToolbar, CardMessage } from "../components";
-import { Card } from "../components/Card/Card";
-import { CardBody } from "../components/Card/CardBody";
-import { CardFooter } from "../components/Card/CardFooter";
-import { CardHeader } from "../components/Card/CardHeader";
-import { CardTitle } from "../components/Card/CardTitle";
+import React, { useState } from "react";
+import { ButtonToolbar } from "../components";
+import { Button } from "../components/Button";
+import Drawer from "../components/Drawer/Drawer";
+import { DrawerContent } from "../components/Drawer/DrawerContent";
+import { DrawerFooter } from "../components/Drawer/DrawerFooter";
+import { DrawerHeader } from "../components/Drawer/DrawerHeader";
 
 export default {
-  title: 'Base/Card/Default',
-  component: Card,
+  title: 'Base/Drawer/Default',
+  component: Drawer,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Card>;
+} as ComponentMeta<typeof Drawer>;
 
-const Template: ComponentStory<typeof Card> = (args) => (
-  <Card { ...args } >
-    <CardHeader>
-      <h3>Card Title</h3>
-    </CardHeader>
-    <CardBody>
-      <p>This is an example card with a header, main content and a footer.</p>
-    </CardBody>
-    <CardFooter>
-      <p>Card Footer</p>
-    </CardFooter>
-  </Card>
-);
-const Template2: ComponentStory<typeof Card> = (args) => (
-  <Card { ...args } style={ { margin: "auto", width: 400 } }>
-    <CardHeader>
-      <CardTitle>Card Title</CardTitle>
-      <ButtonToolbar>
-        <Button icon={ <i className={ "fa fa-sync" }/> }/>
-        <Button icon={ <i className={ "fa fa-cog" }/> }/>
-      </ButtonToolbar>
-    </CardHeader>
-    <CardBody>
-      <p>This is an example card with a header, main content and a footer.</p>
-    </CardBody>
-    <CardFooter>
-      <p>Card Footer</p>
-    </CardFooter>
-  </Card>
-);
-const CardTemplate: ComponentStory<typeof Card> = (args) => (
-  <Card { ...args }>
-    <CardHeader>
-      <CardTitle>Project Manager</CardTitle>
-    </CardHeader>
-    <CardBody flex gap={ "var(--space-sm)" }>
-      <CardMessage
-        title={ "1. Example Project" }
-        subTitle={ "Laravel App - Last updated 2 days ago" }
-        style={ { backgroundColor: "whitesmoke" } }
-        between
-        noBorder
-      >
-        <Button size={ "md" }>Edit</Button>
-      </CardMessage>
-      <CardMessage
-        title={ "1. Example Project" }
-        subTitle={ "Laravel App - Last updated 2 days ago" }
-        style={ { backgroundColor: "whitesmoke" } }
-        between
-        noBorder
-      >
-        <Button size={ "md" }>Edit</Button>
-      </CardMessage>
-      <CardMessage
-        title={ "1. Example Project" }
-        subTitle={ "Laravel App - Last updated 2 days ago" }
-        style={ { backgroundColor: "whitesmoke" } }
-        between
-        noBorder
-      >
-        <Button size={ "md" }>Edit</Button>
-      </CardMessage>
-    </CardBody>
-  </Card>
-);
+const Template: ComponentStory<typeof Drawer> = (args) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <Button onClick={ () => setOpen(true) }>Click</Button>
+      <Drawer { ...args } open={ open } onClose={ () => setOpen(false) }>
+        <DrawerHeader title={ "Listado de comentarios" }/>
+        <DrawerContent>
+          <p>
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+
+          <p>
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+            as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+            ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+            by
+            accident, sometimes on purpose (injected humour and the like).
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+
+          <p>
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+            as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+            ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+            by
+            accident, sometimes on purpose (injected humour and the like).
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+
+          <p>
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+            as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+            ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+            by
+            accident, sometimes on purpose (injected humour and the like).
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+
+          <p>
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+            as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+            ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+            by
+            accident, sometimes on purpose (injected humour and the like).
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+
+          <p>
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+            as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+            ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+            by
+            accident, sometimes on purpose (injected humour and the like). What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+
+          <p>
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+            as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+            ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+            by
+            accident, sometimes on purpose (injected humour and the like).
+          </p>
+        </DrawerContent>
+        <DrawerFooter>
+          <ButtonToolbar>
+            <Button>Cancelar</Button>
+            <Button>Guardar</Button>
+          </ButtonToolbar>
+        </DrawerFooter>
+      </Drawer>
+    </div>
+  );
+};
 export const Default = Template.bind({});
 Default.args = {};
-export const Actions = Template2.bind({});
-Actions.args = {};
-export const CardManager = CardTemplate.bind({});
-CardManager.args = {};

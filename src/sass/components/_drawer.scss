@@ -1,0 +1,30 @@
+.Drawer {
+  --drawer-width: 0;
+  --drawer-max-width: 400px;
+  --drawer-right: -400px;
+  --drawer-padding: 20px;
+  transition: all .3s ease-in-out;
+
+  &__content {
+    max-width: var(--drawer-max-width);
+    position: absolute;
+    right: var(--drawer-right);
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    box-shadow: var(--shadow-xl);
+    transition: all .3s linear;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &--open {
+    --drawer-right: 0;
+  }
+
+  @media screen and(max-width: 500px) {
+    --drawer-max-width: 100%;
+  }
+}
