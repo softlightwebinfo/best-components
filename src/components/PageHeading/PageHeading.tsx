@@ -3,7 +3,9 @@ import { BEM } from "../../functions";
 import { IPageHeadingProps } from "../../props/IPageHeadingProps";
 
 export const PageHeading = (props: IPageHeadingProps) => {
-  const cx = new BEM("PageHeading", {});
+  const cx = new BEM("PageHeading", {
+    fixed: props.fixed,
+  });
   cx.Append(props.className);
 
   const style = {
