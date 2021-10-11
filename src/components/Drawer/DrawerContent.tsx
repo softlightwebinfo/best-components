@@ -8,7 +8,7 @@ export const DrawerContent = forwardRef((props: IDrawerContentProps, ref: any) =
   cx.Append(props.className);
   return (
     <Scroll
-      ref={ props.ref }
+      ref={ ref }
       className={ cx.toString() }
       style={ props.style }
     >
