@@ -12,6 +12,9 @@ export const Avatar = (props: IAvatarProps) => {
 
   const nameData = () => {
     let name: string | undefined;
+    if (typeof props.name != "string") {
+      return "";
+    }
     const data: any = props.name?.split(" ");
 
     if (data.length > 0) {
@@ -24,7 +27,7 @@ export const Avatar = (props: IAvatarProps) => {
   };
   return (
     <div className={ cx.toString() } style={ props.style }>
-      { props.image && (<img src={ props.image } alt={ props.alt } title={ props.name }/>) }
+      { props.image && (<img src={ props.image } alt={ props.alt } title={ props.title }/>) }
       { (!props.image && props.name) && (<span>{ nameData() }</span>) }
       { props.children }
     </div>
