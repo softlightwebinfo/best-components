@@ -67,3 +67,12 @@
     clear: both;
   }
 }
+
+@mixin hoverEffect() {
+  transition: all .3s ease-in-out;
+  &:hover {
+    @include transform(scale(1.03));
+    opacity: .7;
+    cursor: pointer;
+  }
+}
