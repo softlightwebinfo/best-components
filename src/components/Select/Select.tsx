@@ -29,7 +29,8 @@ export const Select = (props: ISelectProps) => {
     const group = () => {
       if (!search) return props.data;
       return props.data.filter(item => {
-        return item.value.toLowerCase().trim().includes(search);
+        return item.value.toLowerCase().trim().includes(search) ||
+          item.label.toLowerCase().trim().includes(search);
       });
     };
 

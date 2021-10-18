@@ -11,7 +11,7 @@ export const AvatarUser = ({ size = "lg", ...props }: IAvatarUserProps) => {
   return (
     <div className={ cx.toString() } style={ props.style }>
       <Avatar size={ size } name={ props.title } image={ props.image }/>
-      <TitleSubtitle title={ props.title } subTitle={ props.subTitle }>{props.content}</TitleSubtitle>
+      <TitleSubtitle title={ props.title } subTitle={ props.subTitle }>{ props.content }</TitleSubtitle>
       { props.children }
     </div>
   );
