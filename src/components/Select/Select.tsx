@@ -103,7 +103,7 @@ export const Select = (props: ISelectProps) => {
           </Button>
         </div>
         { open && (
-          <SelectMenu>
+          <SelectMenu placeholder={props.searchPlaceholder}>
             <SelectNoResults/>
             <SelectMenuItems/>
             <SelectMenuItemsGroup/>

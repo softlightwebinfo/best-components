@@ -4,6 +4,7 @@ import { ISelectMethod, ISelectPickerData } from "../interfaces/ISelectPickerDat
 import { IButtonProps } from "./IButtonProps";
 
 export interface ISelectProps extends IProps, ISelectMethod {
+  searchPlaceholder?: string;
   showSearch?: boolean;
   button?: Partial<IButtonProps>;
   styleButton?: CSSProperties;

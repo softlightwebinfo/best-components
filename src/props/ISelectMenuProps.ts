@@ -1,5 +1,5 @@
 import { IProps } from "../interfaces";
 
 export interface ISelectMenuProps extends IProps {
-
+  placeholder?: string;
 }

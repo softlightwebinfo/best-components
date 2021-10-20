@@ -18,9 +18,9 @@ export const SelectMenu = (props: ISelectMenuProps) => {
   return (
     <div className={ cx.toString() } style={ props.style }>
       { context.showSearch && (
-        <div className={cx.Children("search")}>
+        <div className={ cx.Children("search") }>
           <InputGroup>
-            <Input onChange={ onChange } value={ context.search } placeholder={ "Search" }/>
+            <Input onChange={ onChange } value={ context.search } placeholder={ props.placeholder ?? "Search" }/>
             <InputGroupAddon>
               <i className={ "fa fa-search" }/>
             </InputGroupAddon>
