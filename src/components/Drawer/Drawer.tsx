@@ -35,7 +35,7 @@ export const Drawer = ({ isCloseable = true, ...props }: IDrawerProps) => {
 
   const cx = new BEM("Drawer", {
     open: open,
-    close: !props.open,
+    close: !open,
   });
 
   cx.Append(props.className);
