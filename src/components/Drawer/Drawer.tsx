@@ -13,22 +13,25 @@ export const Drawer = ({ isCloseable = true, ...props }: IDrawerProps) => {
   const [close, setClose] = useState(true);
 
   useEffect(() => {
+    if (!isCloseable) return;
     if (props.open) {
       setClose(false);
     }
-  }, [props.open]);
+  }, [props.open, isCloseable]);
 
   useTimeout(() => {
+    if (!isCloseable) return;
     setOpen(props.open);
   }, 1, props.open);
 
   useEffect(() => {
+    if (!isCloseable) return;
     if (!open) {
       setTimeout(() => {
         setClose(true);
       }, 300);
     }
-  }, [open]);
+  }, [open, isCloseable]);
 
   const cx = new BEM("Drawer", {
     open: open,
@@ -47,6 +50,7 @@ export const Drawer = ({ isCloseable = true, ...props }: IDrawerProps) => {
   };
 
   useOutside(ref, props.open, () => {
+    if (!isCloseable) return;
     value.onClose();
   });
 
