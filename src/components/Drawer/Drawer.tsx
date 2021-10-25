@@ -7,7 +7,7 @@ import { IDrawerProps } from "../../props/IDrawerProps";
 import { Overlay } from "../Overlay";
 import { Portal } from "../Portal/Portal";
 
-export const Drawer = (props: IDrawerProps) => {
+export const Drawer = ({ isCloseable = true, ...props }: IDrawerProps) => {
   const ref = useRef(null);
   const [open, setOpen] = useState(false);
   const [close, setClose] = useState(true);
@@ -40,6 +40,7 @@ export const Drawer = (props: IDrawerProps) => {
   const value = {
     open: open,
     onClose: () => {
+      if (!isCloseable) return;
       setOpen(false);
       props.onClose?.();
     },
