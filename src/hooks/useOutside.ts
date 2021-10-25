@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useOutside = (ref: any, refValue: any, callback: (() => void) | undefined) => {
+export const useOutside = (ref: any, refValue: any, callback: (() => void) | undefined, othersDeps: any[] = []) => {
   useEffect(() => {
     const handleClickOutside = (event: { target: any; }) => {
       if (ref.current && !ref.current.contains(event.target)) {
@@ -13,5 +13,5 @@ export const useOutside = (ref: any, refValue: any, callback: (() => void) | und
       // Unbind the event listener on clean up
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref, refValue]);
+  }, [ref, refValue, ...othersDeps]);
 };
