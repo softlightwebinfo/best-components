@@ -31,6 +31,15 @@ export const Input = forwardRef(({ type = "text", ...props }: IInputProps, ref: 
         readOnly={ props.readOnly }
         required={ props.required }
         autoFocus={ props.autoFocus }
+        onBlur={ props.onBlur }
+        onFocus={ props.onFocus }
+        onKeyDown={ props.onKeyDown }
+        onKeyUp={ props.onKeyUp }
+        onKeyPress={ props.onKeyPress }
+        min={ props.min }
+        max={ props.max }
+        minLength={ props.minLength }
+        maxLength={ props.maxLength }
         ref={ ref }
       />
     </div>

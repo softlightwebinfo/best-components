@@ -13,4 +13,13 @@ export interface IInputProps extends IProps {
   required?: boolean;
   autoFocus?: boolean;
   onChange?: (evt: any) => void;
+  onKeyDown?: (evt: any) => void;
+  onKeyUp?: (evt: any) => void;
+  onKeyPress?: (evt: any) => void;
+  onBlur?: (evt: any) => void;
+  onFocus?: (evt: any) => void;
+  min?: number;
+  max?: number;
+  maxLength?: number;
+  minLength?: number;
 }
