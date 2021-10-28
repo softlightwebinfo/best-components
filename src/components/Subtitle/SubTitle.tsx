@@ -6,6 +6,6 @@ export const SubTitle = (props: ISubTitleProps) => {
   const cx = new BEM("SubTitle", {});
   cx.Append(props.className);
   return (
-    <p className={ cx.toString() } style={ props.style }>{ props.children }</p>
+    <div className={ cx.toString() } style={ props.style }>{ props.children }</div>
   );
 };
