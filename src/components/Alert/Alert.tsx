@@ -43,9 +43,9 @@ export const Alert = ({ ...props }: IAlertProps) => {
       ) }
       <div className={ cx.Children("content") }>
         { props.title && (<h3 className={ cx.Children("title") }>{ props.title }</h3>) }
-        <p className={ cx.Children("message") }>
+        <div className={ cx.Children("message") }>
           { props.message }
-        </p>
+        </div>
         { props.actions && (
           <div className={ cx.Children("actions") }>
             { props.actions }
