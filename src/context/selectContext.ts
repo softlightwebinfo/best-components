@@ -11,7 +11,7 @@ export interface ISelectContext {
   groupBy?: string;
   select?: ISelectPickerData;
   block?: boolean;
-  renderMenuItem?: (label: string, Content: (_pr: any) => JSX.Element) => any;
+  renderMenuItem?: (label: string, Content: any, item: any) => any;
 
   renderMenuGroup?(e: any, cp: any): any;
 }

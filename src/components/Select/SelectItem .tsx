@@ -27,7 +27,7 @@ export const SelectItem = (props: ISelectItemProps) => {
 
   return (
     <Item onClick={ onClick } className={ cx.toString() } style={ props.style }>
-      { context?.renderMenuItem?.(props.label, Content) ?? <Content/> }
+      { context?.renderMenuItem?.(props.label, Content, props.item) ?? <Content/> }
     </Item>
   );
 };
