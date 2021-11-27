@@ -12,6 +12,7 @@ export * from './IButtonProps';
 export * from './IButtonToolbarProps';
 export * from './ICardBodyProps';
 export * from './ICardFooterProps';
+export * from './ICardGridListProps';
 export * from './ICardHeaderProps';
 export * from './ICardHeadingProps';
 export * from './ICardImageProps';

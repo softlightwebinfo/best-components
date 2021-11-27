@@ -1,0 +1,14 @@
+.CardGridList {
+  --card-grid-list-gap: var(--space-s);
+  --card-grid-list-column: 3;
+
+  display: grid;
+  grid-template-columns: repeat(var(--card-grid-list-column), 1fr);
+  gap: var(--card-grid-list-gap);
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-grid-list-gap);
+  }
+}

@@ -9,6 +9,7 @@ export * from './Button';
 export * from './ButtonGroup';
 export * from './ButtonToolbar';
 export * from './Card';
+export * from './CardGridList';
 export * from './CardHeading';
 export * from './CardList';
 export * from './CardMessage';
