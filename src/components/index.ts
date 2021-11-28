@@ -27,6 +27,8 @@ export * from './Dropdown';
 export * from './Fab';
 export * from './FormGroup';
 export * from './Grid';
+export * from './GridImageItem';
+export * from './GridImageSubTitle';
 export * from './Group';
 export * from './Heading';
 export * from './Input';

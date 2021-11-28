@@ -1,0 +1,5 @@
+.GridDefault {
+  display: grid;
+  grid-template-columns: var(--grid-default-columns, repeat(12, 1fr));
+  grid-gap: var(--space-base);
+}

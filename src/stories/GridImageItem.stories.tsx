@@ -1,53 +1,23 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Card } from "../components/Card/Card";
-import { CardBody } from "../components/Card/CardBody";
-import { CardFooter } from "../components/Card/CardFooter";
-import { CardHeader } from "../components/Card/CardHeader";
+import { GridImageItem } from "../components/GridImageItem/GridImageItem";
 
 export default {
-  title: 'Base/Card/Grid',
-  component: Card,
+  title: 'Base/Grid/GridImageItem',
+  component: GridImageItem,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Card>;
+} as ComponentMeta<typeof GridImageItem>;
 
-const Template: ComponentStory<typeof Card> = (args) => (
+const Template: ComponentStory<typeof GridImageItem> = (args) => (
   <div style={ { display: 'flex', gap: 40 } }>
-    <Card { ...args } >
-      <CardHeader>
-        <h3>Card Title</h3>
-      </CardHeader>
-      <CardBody>
-        <p>This is an example card with a header, main content and a footer.</p>
-      </CardBody>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
-    <Card { ...args } >
-      <CardHeader>
-        <h3>Card Title</h3>
-      </CardHeader>
-      <CardBody>
-        <p>This is an example card with a header, main content and a footer.</p>
-      </CardBody>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
-    <Card { ...args } >
-      <CardHeader>
-        <h3>Card Title</h3>
-      </CardHeader>
-      <CardBody>
-        <p>This is an example card with a header, main content and a footer.</p>
-      </CardBody>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
+    <GridImageItem{ ...args }/>
   </div>
 );
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  imageLeft: "https://compass-ssl.microsoft.com/assets/f9/4c/f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png?n=ioc_home_bottomleft_4up_491x276.png"
+,
+  imageRight: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+,
+};

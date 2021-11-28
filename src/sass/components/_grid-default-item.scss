@@ -1,0 +1,38 @@
+.GridDefaultItem {
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      grid-column: span ($i);
+    }
+  }
+  @media only screen and (min-width: 576px) {
+    @for $i from 1 through 12 {
+      &--xs-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @for $i from 1 through 12 {
+      &--md-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    @for $i from 1 through 12 {
+      &--lg-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    @for $i from 1 through 12 {
+      &--xl-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+  }
+}
