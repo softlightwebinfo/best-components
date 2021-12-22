@@ -1,5 +1,7 @@
 .NavbarLogo {
   margin-left: var(--space-base);
+  display: flex;
+  align-items: center;
 
   img {
     height: calc(var(--header-height) - 14px);

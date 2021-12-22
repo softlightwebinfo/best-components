@@ -1,5 +1,6 @@
 export * from './ ICardMessageProps';
 export * from './ INavbarLogoProps';
+export * from './DashboardProps';
 export * from './IAlertProps';
 export * from './IAvatarProps';
 export * from './IAvatarStackedProps';

@@ -19,6 +19,7 @@ export * from './Chip';
 export * from './Close';
 export * from './Container';
 export * from './Content';
+export * from './Dashboard';
 export * from './Descriptions';
 export * from './Dialog';
 export * from './Divider';

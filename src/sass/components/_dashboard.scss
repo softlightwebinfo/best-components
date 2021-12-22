@@ -1,0 +1,28 @@
+.Dashboard {
+  position: fixed;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: var(--dashboard_navbar-column, 300px) var(--dashboard_body-column, 1fr);
+  grid-template-rows: min-content;
+
+  &__navbar {
+    grid-column: var(--dashboard_navbar-position, span 2);
+  }
+
+  &__aside {
+    background-color: var(--dashboard_aside-background, var(--primary));
+    overflow: auto;
+  }
+
+  &__main {
+    background-color: var(--dashboard_aside-background, var(--body));;
+    overflow: auto;
+    padding: var(--dashboard_body-padding, 0);
+  }
+
+  &--paddingBody {
+    --dashboard_body-padding: 20px;
+  }
+}
