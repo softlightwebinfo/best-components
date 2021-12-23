@@ -1,0 +1,7 @@
+.Toolbar {
+  background-color: var(--toolbar-background, var(--primary));
+  color: var(--toolbar-color, var(--secondary));
+  padding: 20px;
+  display: flex;
+  gap: var(--toolbar-gap, 10px);
+}

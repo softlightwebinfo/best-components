@@ -11,6 +11,7 @@ export interface IBadgeProps extends IProps {
   isCloseable?: boolean;
   icon?: ReactNode;
   label: string;
+  default?: boolean;
   textColor?: string;
   backgroundColor?: string;
 }

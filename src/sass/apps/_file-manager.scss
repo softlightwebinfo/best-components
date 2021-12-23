@@ -1,0 +1,32 @@
+.FileManager {
+  display: grid;
+  grid-template-columns: var(--file-manager-columns, 400px 1fr);
+  gap: var(--file-manager-gap, 40px);
+
+  @media (max-width: 500px) {
+    --file-manager-colums: 1fr;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: var(--file-manager_content-grid, repeat(3, 1fr));
+    gap: var(--file-manager_content-gap, 20px);
+    margin-top: 20px;
+
+    .Card {
+      @include hoverEffect;
+    }
+
+    .CardBody {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      i {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

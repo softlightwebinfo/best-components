@@ -1,0 +1,7 @@
+@mixin hover() {
+  @include transitionDefault();
+  &:hover {
+    cursor: pointer;
+    @content;
+  }
+}

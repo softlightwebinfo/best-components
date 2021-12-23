@@ -1,0 +1,18 @@
+.BtnApp {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.5em;
+  background: var(--btnApp-background, #f3f6f9);
+  padding: 20px;
+  color: var(--btnApp-color, var(--secondary));
+  height: auto;
+  justify-content: center;
+  min-height: var(--btnApp-mheight, 150px);
+
+  @include hover() {
+    background-color: var(--btnApp_hover-background, #7047ee);
+    color: var(--btnApp_hover-color, var(--primary));
+  }
+}

@@ -1,41 +1,15 @@
-import { useTimeout } from "@codeunic/library-hooks";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
+import { createPortal } from "react-dom";
 import { DrawerContext } from "../../context/drawerContext";
 import { BEM } from "../../functions";
 import { useOutside } from "../../hooks/useOutside";
 import { IDrawerProps } from "../../props/IDrawerProps";
 import { Overlay } from "../Overlay";
-import { Portal } from "../Portal/Portal";
 
-export const Drawer = ({ isCloseable = true, ...props }: IDrawerProps) => {
+export const Drawer = ({ isCloseable = true, open, ...props }: IDrawerProps) => {
   const ref = useRef(null);
-  const [open, setOpen] = useState(false);
-  const [close, setClose] = useState(true);
-
-  useEffect(() => {
-    if (!isCloseable) return;
-    if (props.open) {
-      setClose(false);
-    }
-  }, [props.open]);
-
-  useTimeout(() => {
-    if (!isCloseable) return;
-    setOpen(props.open);
-  }, 1, props.open);
-
-  useEffect(() => {
-    if (!isCloseable) return;
-    if (!open) {
-      setTimeout(() => {
-        setClose(true);
-      }, 300);
-    }
-  }, [open, isCloseable]);
-
   const cx = new BEM("Drawer", {
     open: open,
-    close: !open,
   });
 
   cx.Append(props.className);
@@ -44,27 +18,25 @@ export const Drawer = ({ isCloseable = true, ...props }: IDrawerProps) => {
     open: open,
     onClose: () => {
       if (!isCloseable) return;
-      setOpen(false);
       props.onClose?.();
     },
   };
 
-  useOutside(ref, props.open, () => {
+  useOutside(ref, open, () => {
     if (!isCloseable) return;
     value.onClose();
   }, [isCloseable]);
 
-  if (close) return null;
+  if (!open) return null;
 
-  return (
+  return createPortal(
     <DrawerContext.Provider value={ value }>
       <Overlay className={ cx.toString() } style={ props.style }>
         <div ref={ ref } className={ cx.Children("content") }>
           { props.children }
         </div>
       </Overlay>
-    </DrawerContext.Provider>
+    </DrawerContext.Provider>,
+    document.body,
   );
 };
-
-export default Portal(Drawer);

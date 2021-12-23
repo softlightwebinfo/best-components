@@ -1,0 +1,31 @@
+.Dot {
+  font-weight: 300;
+  line-height: 1.3;
+  font-size: 85%;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 100%;
+  display: inline-flex;
+  background-color: var(--dot-background, gainsboro);
+
+  &--success {
+    --dot-background: var(--color-success-2);
+  }
+
+  &--warning {
+    --dot-background: var(--color-warning-2);
+  }
+
+  &--primary {
+    --dot-background: var(--color-primary);
+  }
+
+  &--danger {
+    --dot-background: var(--color-error-2);
+  }
+
+  &--info {
+    --dot-background: var(--color-info-2);
+  }
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import { BEM } from "../../functions";
-import { IToolbarProps } from "../../props/IToolbarProps";
+import { IToolbarRightProps } from "../../props/IToolbarRightProps";
 
-export const Toolbar = (props: IToolbarProps) => {
-  const cx = new BEM("Toolbar", {});
+export const ToolbarRight = (props: IToolbarRightProps) => {
+  const cx = new BEM("ToolbarRight", {});
   cx.Append(props.className);
 
   return (

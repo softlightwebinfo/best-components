@@ -1,3 +1,8 @@
 .Divider {
   border-top: 1px solid rgba(243, 244, 246, var(--divide-opacity));
+
+  &--spacer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

@@ -8,6 +8,7 @@ export const Badge = (props: IBadgeProps) => {
     [props.type ?? '']: !!props.type,
     transparent: props.transparent,
     radius: props.radius,
+    default: props.default,
   });
   cx.Append(props.className);
   return (

@@ -34,5 +34,6 @@ generate("./src/interfaces");
 generate("./src/props");
 generate("./src/functions");
 generate("./src/components", true);
+generate("./src/apps", true);
 generate("./src/widget", true);
 generate("./src/context");

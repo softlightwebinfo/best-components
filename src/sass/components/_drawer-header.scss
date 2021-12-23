@@ -9,4 +9,8 @@
     margin-left: auto;
     cursor: pointer;
   }
+
+  &--transparent {
+    --drawer-header-background: none;
+  }
 }

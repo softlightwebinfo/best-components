@@ -1,0 +1,14 @@
+.Close {
+  background-color: #ffd6de;
+  border-color: #ffd6de;
+  color: #ee3158;
+  padding: 0.375rem 0.75rem;
+  font-size: .925rem;
+  line-height: 1.35;
+  border-radius: 5px;
+  @include hover {
+    background-color: #ee3158;
+    border-color: #ee3158;
+    color: #ffffff;
+  }
+}

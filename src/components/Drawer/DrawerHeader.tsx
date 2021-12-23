@@ -7,7 +7,9 @@ import { Title } from "../Titlte";
 
 export const DrawerHeader = (props: IDrawerHeaderProps) => {
   const context = useDrawerContext();
-  const cx = new BEM("DrawerHeader", {});
+  const cx = new BEM("DrawerHeader", {
+    transparent: props.transparent,
+  });
   cx.Append(props.className);
 
   const onClose = () => {

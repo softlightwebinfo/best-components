@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React, { useState } from "react";
 import { ButtonToolbar } from "../components";
 import { Button } from "../components/Button";
-import Drawer from "../components/Drawer/Drawer";
+import { Drawer } from "../components/Drawer/Drawer";
 import { DrawerContent } from "../components/Drawer/DrawerContent";
 import { DrawerFooter } from "../components/Drawer/DrawerFooter";
 import { DrawerHeader } from "../components/Drawer/DrawerHeader";
