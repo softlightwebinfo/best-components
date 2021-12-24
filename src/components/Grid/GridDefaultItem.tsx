@@ -9,6 +9,7 @@ export const GridDefaultItem = (props: IGridDefaultProps) => {
     md: props.md,
     lg: props.lg,
     xl: props.xl,
+    xxl: props.xxl,
     col: props.col,
   });
   cx.Append(props.className);
