@@ -4,15 +4,24 @@
       grid-column: span ($i);
     }
   }
-  @media only screen and (min-width: 576px) {
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
     @for $i from 1 through 12 {
       &--xs-#{$i} {
         grid-column: span ($i);
       }
     }
   }
-
-  @media screen and (min-width: 768px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    @for $i from 1 through 12 {
+      &--sm-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
     @for $i from 1 through 12 {
       &--md-#{$i} {
         grid-column: span ($i);
@@ -20,15 +29,16 @@
     }
   }
 
-  @media (min-width: 992px) {
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
     @for $i from 1 through 12 {
       &--lg-#{$i} {
         grid-column: span ($i);
       }
     }
   }
-
-  @media (min-width: 1200px) {
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
     @for $i from 1 through 12 {
       &--xl-#{$i} {
         grid-column: span ($i);
