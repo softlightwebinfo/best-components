@@ -39,6 +39,8 @@ export const Input = forwardRef(({ type = "text", ...props }: IInputProps, ref: 
         min={ props.min }
         max={ props.max }
         minLength={ props.minLength }
+        pattern={props.pattern}
+        step={props.step}
         maxLength={ props.maxLength }
         ref={ ref }
       />

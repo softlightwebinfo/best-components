@@ -21,5 +21,7 @@ export interface IInputProps extends IProps {
   min?: number;
   max?: number;
   maxLength?: number;
+  step?: number | string;
+  pattern?: string;
   minLength?: number;
 }
