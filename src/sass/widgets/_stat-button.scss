@@ -1,0 +1,24 @@
+.StatButtonWidget {
+  @extend .CardBody;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+
+  .ButtonRaiser {
+    margin-right: auto;
+    margin-bottom: var(--space-m);
+  }
+
+  div {
+    margin-bottom: var(--space-m);
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
+  div > span {
+    margin-left: 10px;
+  }
+}

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { IProps } from "../interfaces";
-import { TButtonType, TOnClick, TSize } from "../types";
+import { TAlertType, TButtonType, TOnClick, TSize } from "../types";
 
 export interface IButtonProps extends IProps {
   dashed?: boolean;
@@ -14,4 +14,6 @@ export interface IButtonProps extends IProps {
   icon?: ReactNode;
   type?: TButtonType;
   size?: TSize;
+  theme?: TAlertType;
+  raiser?: boolean;
 }

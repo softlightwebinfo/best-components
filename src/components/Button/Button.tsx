@@ -12,6 +12,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
     dark: props.dark,
     [props.size ?? '']: !!props.size,
     iconChildren: !!(props.icon && !props.children),
+    [props.theme ?? '']: !!props.theme,
   });
   cx.Append(props.className);
   return (
@@ -23,7 +24,7 @@ export const Button = ({ type = "button", ...props }: IButtonProps) => {
       className={ cx.toString() }
     >
       { props.icon && (<span className={ cx.Children("icon") }>{ props.icon }</span>) }
-      {props.children&&<span className={cx.Children("content")}>{ props.children }</span>}
+      { props.children && <span className={ cx.Children("content") }>{ props.children }</span> }
     </button>
   );
 };

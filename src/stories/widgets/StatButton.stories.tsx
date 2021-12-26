@@ -1,32 +1,34 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { GridDefault } from "../../components";
-import { StatWidget } from "../../widget/StatWidget/StatWidget";
+import { StatButtonWidget } from "../../widget/StatWidget/StatButtonWidget";
 
 export default {
-  title: 'Widget/Stat/Default',
-  component: StatWidget,
+  title: 'Widget/Stat/Button',
+  component: StatButtonWidget,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof StatWidget>;
+} as ComponentMeta<typeof StatButtonWidget>;
 
-const Template: ComponentStory<typeof StatWidget> = (args) => <StatWidget { ...args } />;
+const Template: ComponentStory<typeof StatButtonWidget> = (args) => <StatButtonWidget { ...args } />;
 export const Default = Template.bind({});
 Default.args = {
-  title: "1 TB",
-  subtitle: "Documents",
-  progress: 25,
+  title: "Tickets",
+  number: 128,
+  previousNumber: 200,
+  subTitle: "From Previous month",
 };
-const TemplateBase: ComponentStory<typeof StatWidget> = (args) => (
-  <GridDefault auto={300} margin>
-    { [...new Array(20)].map((item,index) => (
-      <StatWidget { ...args } key={index}/>
+const TemplateBase: ComponentStory<typeof StatButtonWidget> = (args) => (
+  <GridDefault auto={ 300 } margin>
+    { [...new Array(20)].map((item, index) => (
+      <StatButtonWidget { ...args } key={ index }/>
     )) }
   </GridDefault>
 );
 export const GridBase = TemplateBase.bind({});
 GridBase.args = {
-  title: "1 TB",
-  subtitle: "Documents",
-  progress: 25,
+  title: "Tickets",
+  number: 128,
+  previousNumber: 200,
+  subTitle: "From Previous month",
 };

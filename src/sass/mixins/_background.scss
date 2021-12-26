@@ -1,0 +1,31 @@
+@mixin backgroundTheme($raiser: false) {
+  &--info {
+    background: #4099ff;
+    color: white;
+  }
+
+  &--primary {
+    background: var(--primary);
+    color: var(--secondary);
+  }
+
+  &--success {
+    background: #2ed8b6;
+    color: white;
+  }
+
+  &--danger {
+    background: #FF5370;
+    color: white;
+  }
+
+  &--warning {
+    background: #FFB64D;
+    color: white;
+  }
+
+  &--secondary {
+    background: var(--secondary);
+    color: var(--primary);
+  }
+}
