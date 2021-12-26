@@ -1,23 +1,19 @@
 .Checkbox {
   $then: &;
-  $color__back: #252224;
+  $color__back: whitesmoke;
   $color__back--high: lighten($color__back, 20%);
   $color__text: black;
   $color__text--low: darken($color__text, 50%);
   $color__primary: #5dceee;
-
   $checkbox__size: 20px;
   $switch__size: $checkbox__size;
-
-  $checkbox__border__size: 2px;
+  $checkbox__border__size: 1px;
   $checkbox__border__color: $color__primary;
   $checkbox__border__color--disabled: $color__back--high;
-
   $checkbox__checkmark__size: $checkbox__size - (2*$checkbox__border__size);
   $checkbox__checkmark__size--indeterminate: 2px;
   $checkbox__checkmark__color: $color__primary;
   $checkbox__checkmark__color--disabled: $color__back--high;
-
   $checkbox__label__color: $color__text;
   $checkbox__label__color--disabled: $color__text--low;
 
@@ -44,6 +40,7 @@
     background: $color__back;
     cursor: pointer;
     border: $checkbox__border__size solid $checkbox__border__color;
+    border-radius: 4px;
 
     &::before {
       content: ' ';

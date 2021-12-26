@@ -1,0 +1,11 @@
+.TaskLineCardWidget {
+  > .Group {
+    margin: var(--space-m);
+  }
+
+  &__items {
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+  }
+}

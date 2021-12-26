@@ -7,6 +7,7 @@ export * from './TDropdownPlacement';
 export * from './TDropdownTrigger';
 export * from './TFixed';
 export * from './TInputType';
+export * from './TKanban';
 export * from './TLineStatus';
 export * from './TModalSize';
 export * from './TNavAppearance';

@@ -3,6 +3,8 @@ import { IProps } from "../interfaces";
 import { TSize } from "../types";
 
 export interface IAvatarProps extends IProps {
+  onClick?(evt: any): void;
+
   title?: string;
   rounded?: boolean;
   image?: string;

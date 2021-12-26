@@ -1,0 +1,18 @@
+.WrapperHeader {
+  padding: var(--space-m);
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: var(--wrapper-image);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: .2;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+  }
+}

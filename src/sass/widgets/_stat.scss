@@ -1,0 +1,16 @@
+.StatWidget {
+  > .Title,
+  > .SubTitle {
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
+  }
+
+  > .Title {
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-s);
+  }
+
+  > .SubTitle {
+    margin-bottom: var(--space-m);
+  }
+}

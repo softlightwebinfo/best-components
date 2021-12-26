@@ -1,0 +1,27 @@
+.Kanban {
+  width: 100%;
+  flex: 1;
+  white-space: nowrap;
+  overflow-x: scroll;
+  display: flex;
+  padding: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: calc(100% - 3rem);
+
+  &__col {
+    user-select: none;
+    flex: 1 0 auto;
+    width: 100vw;
+    max-height: 100%;
+    outline: none;
+    @media (min-width: 576px) {
+      max-width: 25.5rem;
+    }
+
+    .CardBody {
+      height: 100%;
+      overflow: auto;
+    }
+  }
+}

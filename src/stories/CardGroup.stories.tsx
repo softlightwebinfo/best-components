@@ -1,78 +1,58 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Button } from "../components";
-import { Alert } from "../components/Alert/Alert";
-import { ButtonToolbar } from "../components/ButtonToolbar/ButtonToolbar";
+import { CardGroup } from "../components/CardGroup/CardGroup";
+import { TeamProjectWidget } from "../widget/TeamProjectWidget/TeamProjectWidget";
 
 export default {
-  title: 'Base/Alert/Default',
-  component: Alert,
+  title: 'Base/CardGroup/Default',
+  component: CardGroup,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Alert>;
+} as ComponentMeta<typeof CardGroup>;
 
-const Template: ComponentStory<typeof Alert> = (args) => <Alert { ...args } />;
+const Template: ComponentStory<typeof CardGroup> = (args) => (
+  <CardGroup { ...args } >
+    <TeamProjectWidget
+      date={ "Due Tomorrow" } numberTotal={ 20 } number={ 3 }
+      team={ [
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+      ] }
+      title={ "Source placeholders" } progress={ 21 }
+    />
+    <TeamProjectWidget
+      date={ "Due Tomorrow" } numberTotal={ 20 } number={ 3 }
+      team={ [
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+      ] }
+      title={ "Source placeholders" } progress={ 21 }
+    />
+    <TeamProjectWidget
+      date={ "Due Tomorrow" } numberTotal={ 20 } number={ 3 }
+      team={ [
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+        { name: "Rafa Gonzalez", title: "" },
+      ] }
+      title={ "Source placeholders" } progress={ 21 }
+    />
+  </CardGroup>
+);
 export const Default = Template.bind({});
 Default.args = {
-  message: "This is just a reminder to update your personal data.",
-};
-
-export const Right = Template.bind({});
-Right.args = {
-  message: "This is just a reminder to update your personal data.",
-  right: (
-    <a href="">Account</a>
-  ),
-};
-export const Title = Template.bind({});
-Title.args = {
-  title: "It´s time for an update",
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-};
-export const Actions = Template.bind({});
-Actions.args = {
-  title: "It´s time for an update",
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  actions: (
-    <ButtonToolbar>
-      <Button>Go Back</Button>
-      <Button default>Reinstall</Button>
-    </ButtonToolbar>
-  ),
-};
-export const Type = Template.bind({});
-Type.args = {
-  title: "It´s time for an update",
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  type: "info",
-  actions: (
-    <ButtonToolbar>
-      <Button>Go Back</Button>
-      <Button default>Reinstall</Button>
-    </ButtonToolbar>
-  ),
-};
-export const IsCloseable = Template.bind({});
-IsCloseable.args = {
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  isCloseable: true,
-  right: (<Button>About us</Button>),
-};
-export const IsIcon = Template.bind({});
-IsIcon.args = {
-  message: "v2.0 is now available and comes packed with amazing features. Would you like to install it now?",
-  isCloseable: true,
-  isIcon: true,
-  right: (<Button>About us</Button>),
-};
-export const AlertDanger = Template.bind({});
-AlertDanger.args = {
-  message: "Please fix the following errors:",
-  isIcon: true,
-  type: "danger",
-  data: [
-    "Emails is a required field",
-    "Password must have at least 8 character",
-    "Please enter your age",
+  style: { width: 450, margin: "auto" },
+  title: "Backlog",
+  buttonText: "Add task",
+  subTitle: "Add new task",
+  actions: [
+    { label: "Add task", value: "1" },
+    { label: "Delete panel", value: "1" },
+    { label: "Edit panel", value: "1" },
   ],
 };

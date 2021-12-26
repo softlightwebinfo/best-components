@@ -10,6 +10,7 @@ export const GridDefault = (props: IGridDefaultProps) => {
     xl: props.xl,
     col: props.col,
     auto: !!props.auto,
+    margin: props.margin,
   });
 
   cx.Append(props.className);

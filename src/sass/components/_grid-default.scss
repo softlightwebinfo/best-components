@@ -14,4 +14,8 @@
   &--auto {
     grid-template-columns: repeat(auto-fit, minmax(var(--grid-default_auto-column, 300px), 1fr));
   }
+
+  &--margin {
+    margin: var(--space-m);
+  }
 }

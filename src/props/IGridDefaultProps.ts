@@ -1,6 +1,7 @@
 import { IProps } from "../interfaces";
 
 export interface IGridDefaultProps extends IProps {
+  margin?: boolean;
   auto?: number;
   col?: number;
   sm?: number;

@@ -1,0 +1,18 @@
+.TeamProjectWidget {
+  > .Title {
+    margin: var(--space-m);
+  }
+
+  > .AvatarStacked {
+    margin-left: var(--space-m);
+  }
+
+  > .Group {
+    margin: var(--space-m);
+    font-size: 1.2em;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+}

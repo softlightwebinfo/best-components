@@ -1,21 +1,25 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Badge } from "../components/Badge/Badge";
+import { CheckItem } from "../components/CheckItem/CheckItem";
 
 export default {
-  title: 'Base/Badge/Default',
-  component: Badge,
+  title: 'Base/CheckItem/Default',
+  component: CheckItem,
   argTypes: {},
   args: {},
-} as ComponentMeta<typeof Badge>;
+} as ComponentMeta<typeof CheckItem>;
 
-const Template: ComponentStory<typeof Badge> = (args) => <Badge { ...args } />;
+const Template: ComponentStory<typeof CheckItem> = (args) => <CheckItem { ...args } />;
 export const Default = Template.bind({});
+const Template2: ComponentStory<typeof CheckItem> = (args) => (
+  <div style={ { padding: 20 } }>
+    { [...new Array(10)].map((_, index) => <CheckItem { ...args } />) }
+  </div>
+);
 Default.args = {
-  label: "Badge",
+  title: "Identify three distinct aesthetic styles for boards",
 };
-export const Icon = Template.bind({});
-Icon.args = {
-  icon: <i className={"fa fa-check"}/>,
-  label: "Badge",
+export const List = Template2.bind({});
+List.args = {
+  title: "Identify three distinct aesthetic styles for boards",
 };

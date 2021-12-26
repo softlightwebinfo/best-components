@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Badge } from "../components";
-import { DividerHeading } from "../components/Divider/DividerHeading/DividerHeading";
+import { DividerHeading } from "../components/Divider/DividerHeading";
 
 export default {
   title: 'Base/DividerHeading/Default',

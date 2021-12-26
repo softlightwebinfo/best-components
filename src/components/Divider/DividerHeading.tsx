@@ -1,6 +1,6 @@
 import React from "react";
-import { BEM } from "../../../functions";
-import { IDividerHeadingProps } from "../../../props/IDividerHeadingProps";
+import { BEM } from "../../functions";
+import { IDividerHeadingProps } from "../../props/IDividerHeadingProps";
 
 export const DividerHeading = (props: IDividerHeadingProps) => {
   const cx = new BEM("DividerHeading", {});
