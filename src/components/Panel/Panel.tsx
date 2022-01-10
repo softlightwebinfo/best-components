@@ -26,7 +26,7 @@ export const Panel = (props: IPanelProps) => {
 
   const onClickSync = useCallback(() => {
     toggleLoading();
-    props.onClickSync?.();
+    props.onClickSync?.(toggleLoading);
   }, []);
 
   const onClickMinus = useCallback(() => {

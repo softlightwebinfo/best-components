@@ -8,7 +8,7 @@ export interface IActionIconsProps extends IProps {
 
   onClickMinus?(): any;
 
-  onClickSync?(): any;
+  onClickSync?(toggleLoading: () => void): any;
 
   onClickTrash?(): any;
 
