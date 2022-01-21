@@ -1,0 +1,44 @@
+.ChatSendMessage {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-self: end;
+  justify-self: end;
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid gainsboro;
+  padding: 10px;
+  width: 100%;
+
+  input {
+    border: 0;
+    flex: 1;
+  }
+
+  .Button {
+    padding: 0 10px;
+    font-size: 20px;
+  }
+
+  .DropdownMenu {
+    bottom: 44px;
+  }
+
+  &__emojis {
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 28px);
+    gap: 11px;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+
+    span {
+      @include hoverEffect;
+    }
+  }
+}

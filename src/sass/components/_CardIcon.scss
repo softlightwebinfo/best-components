@@ -1,0 +1,10 @@
+.CardIcon {
+  background-color: var(--CardIcon-background, rgb(37, 37, 37));
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+  }
+}

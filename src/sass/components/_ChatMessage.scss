@@ -1,0 +1,21 @@
+.ChatMessage {
+  $then: &;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  gap: 5px;
+
+  &__message {
+    background-color: var(--ChatMessage_message-bg, #544b60);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 5px;
+
+  }
+
+  &--isMy {
+    --ChatMessage_message-bg: var(--ChatMessage_message-bg-isMy, #bb27b9);
+    margin-left: auto;
+    text-align: right;
+  }
+}

@@ -1,0 +1,14 @@
+.ChatContact {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 352px;
+  height: 652px;
+  z-index: 1;
+
+  .CardIcon {
+    margin-top: 20px;
+  }
+}

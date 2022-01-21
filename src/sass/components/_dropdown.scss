@@ -16,5 +16,12 @@
       right: 0;
       left: initial;
     }
+
+    #{$then}--top-left & {
+      bottom: 0;
+      top: initial;
+      right: 0;
+      left: initial;
+    }
   }
 }
