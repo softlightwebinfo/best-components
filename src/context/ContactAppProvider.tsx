@@ -93,7 +93,7 @@ export const ContactAppProvider = (props: IContactAppProviderProps) => {
 
   return (
     <ContactAppContext.Provider value={ value }>
-      { props.children(value) }
+      { props.children?.(value) }
     </ContactAppContext.Provider>
   );
 };
