@@ -15,6 +15,8 @@ export const ContactApp = forwardRef((props: IContactAppProps, ref: any) => {
       onSubmit={ props.onSubmit }
       startApp={ props.startApp }
       addMessageChat={ props.addMessageChat }
+      onLoadEndMessages={props.onLoadEndMessages}
+      onToggle={props.onToggle}
       ref={ref}
     >
       { ({ show, toggle }) => (
