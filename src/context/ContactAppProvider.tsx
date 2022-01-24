@@ -73,12 +73,15 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
     props.addMessageChat?.(message);
   }, [message]);
 
+  useEffect(() => {
+    props.onToggle?.(refBody);
+  }, [show, refBody]);
+
   const value: IContactAppContext = {
     show,
     showStartApp,
     refBody,
     toggle: () => {
-      props.onToggle?.(refBody);
       toggle();
     },
     startApp() {
