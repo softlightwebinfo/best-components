@@ -1,5 +1,5 @@
 import { useLocalStorage, useToggle } from "@codeunic/library-hooks";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, forwardRef, useContext, useEffect, useImperativeHandle, useState } from "react";
 import { IMessage } from "../interfaces/IMessage";
 import { IContactAppProviderProps } from "../props/IContactAppProviderProps";
 
@@ -33,7 +33,7 @@ export const ContactAppContext = createContext<IContactAppContext>({
 
 export const useContactAppProvider = () => useContext(ContactAppContext);
 
-export const ContactAppProvider = (props: IContactAppProviderProps) => {
+export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, ref: any) => {
   const [show, { toggle }] = useToggle();
   const [showStartApp, { toggle: startApp, on: onStartApp }] = useToggle();
   const [message, onChange] = useState<string>("");
@@ -91,9 +91,11 @@ export const ContactAppProvider = (props: IContactAppProviderProps) => {
     },
   };
 
+  useImperativeHandle(ref, () => value);
+
   return (
     <ContactAppContext.Provider value={ value }>
-      { props.children?.(value) }
+      { props.children?.(value, ref) }
     </ContactAppContext.Provider>
   );
-};
+});

@@ -4,7 +4,7 @@ import { IProps } from "../interfaces";
 import { IMessage } from "../interfaces/IMessage";
 
 export interface IContactAppProviderProps extends IProps {
-  children?(data: IContactAppContext): ReactNode;
+  children?(data: IContactAppContext, ref: any): React.ReactNode;
 
   startApp?(): void;
 
