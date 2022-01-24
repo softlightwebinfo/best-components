@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { IContactAppContext } from "../context/ContactAppProvider";
 import { IProps } from "../interfaces";
 import { IMessage } from "../interfaces/IMessage";
@@ -16,6 +15,8 @@ export interface IContactAppProviderProps extends IProps {
 }
 
 export interface IContactAppFunctions {
+  refBody?: any;
+
   onChange?(evt: any): any;
 
   setMessagesChat?(evt: any): any;

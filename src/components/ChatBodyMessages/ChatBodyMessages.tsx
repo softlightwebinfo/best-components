@@ -11,7 +11,7 @@ export const ChatBodyMessages = (props: IChatBodyMessagesProps) => {
   cx.Append(props.className);
 
   return (
-    <div className={ cx.toString() } style={ props.style }>
+    <div className={ cx.toString() } style={ props.style } ref={app.refBody}>
       { app.messages.map((item, index) => (
         <ChatMessage key={ index } { ...item }/>
       )) }

@@ -1,9 +1,10 @@
 import { useLocalStorage, useToggle } from "@codeunic/library-hooks";
-import React, { createContext, forwardRef, useContext, useEffect, useImperativeHandle, useState } from "react";
+import React, { createContext, forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { IMessage } from "../interfaces/IMessage";
 import { IContactAppProviderProps } from "../props/IContactAppProviderProps";
 
 export interface IContactAppContext {
+  refBody?: any;
   messages: IMessage[];
   show: boolean;
   showStartApp: boolean;
@@ -38,8 +39,8 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
   const [showStartApp, { toggle: startApp, on: onStartApp }] = useToggle();
   const [message, onChange] = useState<string>("");
   const [messages, setMessagesChat] = useState<IMessage[]>([]);
-
   const [localChat, setLocalChat] = useLocalStorage("chat", {});
+  const refBody = useRef(null);
 
   const loadMessages = async () => {
     try {
@@ -69,6 +70,7 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
   const value: IContactAppContext = {
     show,
     showStartApp,
+    refBody,
     toggle,
     startApp() {
       setLocalChat({ initialize: true });
@@ -87,7 +89,7 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
     },
     onSubmit(ev): any {
       ev.preventDefault();
-      props.onSubmit?.(ev, message, { onChange, addMessageChat: value.addMessageChat, setMessagesChat });
+      props.onSubmit?.(ev, message, { onChange, addMessageChat: value.addMessageChat, setMessagesChat, refBody });
     },
   };
 
