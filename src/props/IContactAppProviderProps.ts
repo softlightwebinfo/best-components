@@ -17,4 +17,8 @@ export interface IContactAppProviderProps extends IProps {
 
 export interface IContactAppFunctions {
   onChange?(evt: any): any;
+
+  setMessagesChat?(evt: any): any;
+
+  addMessageChat?(message: IMessage): any;
 }
