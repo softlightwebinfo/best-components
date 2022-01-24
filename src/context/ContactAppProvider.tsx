@@ -87,7 +87,7 @@ export const ContactAppProvider = (props: IContactAppProviderProps) => {
     },
     onSubmit(ev): any {
       ev.preventDefault();
-      props.onSubmit?.(ev, message);
+      props.onSubmit?.(ev, message, { onChange });
     },
   };
 

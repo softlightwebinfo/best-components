@@ -10,7 +10,11 @@ export interface IContactAppProviderProps extends IProps {
 
   addMessageChat?(message: string): void;
 
-  onSubmit(ev: any, message: string): void;
+  onSubmit(ev: any, message: string, data: IContactAppFunctions): void;
 
   onLoadMessages(): Promise<IMessage[]>;
+}
+
+export interface IContactAppFunctions {
+  onChange?(evt: any): any;
 }
