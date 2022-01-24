@@ -53,6 +53,12 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
   };
 
   useEffect(() => {
+    // @ts-ignore
+    refBody?.current?.scrollIntoView?.({ behavior: "smooth" });
+    props.onLoadEndMessages?.(refBody);
+  }, [messages]);
+
+  useEffect(() => {
     loadMessages();
   }, [props.onLoadMessages]);
 
@@ -71,7 +77,10 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
     show,
     showStartApp,
     refBody,
-    toggle,
+    toggle: () => {
+      toggle();
+      props.onToggle?.(refBody);
+    },
     startApp() {
       setLocalChat({ initialize: true });
     },

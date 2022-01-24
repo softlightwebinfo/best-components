@@ -12,6 +12,10 @@ export interface IContactAppProviderProps extends IProps {
   onSubmit(ev: any, message: string, data: IContactAppFunctions): void;
 
   onLoadMessages(): Promise<IMessage[]>;
+
+  onLoadEndMessages?(refBody: any): void;
+
+  onToggle?(refBody: any): void;
 }
 
 export interface IContactAppFunctions {
