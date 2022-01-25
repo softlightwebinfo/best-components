@@ -6,28 +6,33 @@ import { BEM } from "../../functions";
 import { IContactAppProps } from "../../props/IContactAppProps";
 
 export const ContactApp = forwardRef((props: IContactAppProps, ref: any) => {
-  const cx = new BEM("ContactApp", {});
+  const cx = new BEM("ContactApp", {
+    relative: props.relative,
+  });
   cx.Append(props.className);
 
   return (
     <ContactAppProvider
+      initialOpen={ props.initialOpen }
       onLoadMessages={ props.onLoadMessages }
       onSubmit={ props.onSubmit }
       startApp={ props.startApp }
       addMessageChat={ props.addMessageChat }
-      onLoadEndMessages={props.onLoadEndMessages}
-      onToggle={props.onToggle}
-      ref={ref}
+      onLoadEndMessages={ props.onLoadEndMessages }
+      onToggle={ props.onToggle }
+      ref={ ref }
     >
       { ({ show, toggle }) => (
         <div className={ cx.toString() } style={ props.style }>
-          { show && (
+          { (props.relative || show) && (
             <ChatContact/>
           ) }
-          <Fab
-            onClick={ toggle }
-            icon={ <i style={ { fontSize: 20 } } className={ "fa fa-comment" }/> }
-          />
+          { (!props.relative || !show) && (
+            <Fab
+              onClick={ toggle }
+              icon={ <i style={ { fontSize: 20 } } className={ "fa fa-comment" }/> }
+            />
+          ) }
         </div>
       ) }
     </ContactAppProvider>
