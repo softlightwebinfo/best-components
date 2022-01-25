@@ -16,6 +16,8 @@ export interface IContactAppContext {
 
   onChange?(evt: any): any;
 
+  onChangeValue?(evt: any): any;
+
   addMessage?(item: string): void;
 
   onSubmit?(ev: any): any;
@@ -93,6 +95,7 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
     addMessageChat(message: IMessage) {
       setMessagesChat(msg => ([...msg, message]));
     },
+    onChangeValue: onChange,
     onChange(evt) {
       onChange(evt.target.value);
     },
