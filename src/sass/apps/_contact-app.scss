@@ -1,0 +1,14 @@
+.ContactApp {
+  &--relative {
+    .ChatContact {
+      position: relative;
+      width: 100%;
+
+      .SpaceBetween {
+        > .Button {
+          display: none;
+        }
+      }
+    }
+  }
+}
