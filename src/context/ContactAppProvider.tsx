@@ -35,7 +35,7 @@ export const ContactAppContext = createContext<IContactAppContext>({
 export const useContactAppProvider = () => useContext(ContactAppContext);
 
 export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, ref: any) => {
-  const [show, { toggle }] = useToggle();
+  const [show, { toggle }] = useToggle(props.initialOpen);
   const [showStartApp, { toggle: startApp, on: onStartApp }] = useToggle();
   const [message, onChange] = useState<string>("");
   const [messages, setMessagesChat] = useState<IMessage[]>([]);

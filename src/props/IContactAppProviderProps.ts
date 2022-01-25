@@ -3,6 +3,7 @@ import { IProps } from "../interfaces";
 import { IMessage } from "../interfaces/IMessage";
 
 export interface IContactAppProviderProps extends IProps {
+  initialOpen?: boolean;
   children?(data: IContactAppContext, ref: any): React.ReactNode;
 
   startApp?(): void;
