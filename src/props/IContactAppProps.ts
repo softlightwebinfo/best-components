@@ -4,6 +4,6 @@ import { IContactAppProviderProps } from "./IContactAppProviderProps";
 export interface IContactAppProps extends IContactAppProviderProps {
   onClickMute?(evt: any):any;
   dropdownSettings?: ReactNode;
-  description?: string;
+  description?: ReactNode;
   relative?: boolean;
 }
