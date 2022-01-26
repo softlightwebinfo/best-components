@@ -1,6 +1,6 @@
 {
   "name": "@codeunic/best-components",
-  "version": "0.41.16",
+  "version": "0.42.0",
   "description": "The project was developer for anyone people need the  react components.",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
