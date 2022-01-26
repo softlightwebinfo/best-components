@@ -1,4 +1,4 @@
-import { useLocalStorage, useToggle } from "@codeunic/library-hooks";
+import { useSessionStorage, useToggle } from "@codeunic/library-hooks";
 import React, { createContext, forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { IMessage } from "../interfaces/IMessage";
 import { IContactAppProviderProps } from "../props/IContactAppProviderProps";
@@ -41,7 +41,7 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
   const [showStartApp, { toggle: startApp, on: onStartApp }] = useToggle();
   const [message, onChange] = useState<string>("");
   const [messages, setMessagesChat] = useState<IMessage[]>([]);
-  const [localChat, setLocalChat] = useLocalStorage("chat", {});
+  const [localChat, setLocalChat] = useSessionStorage("chat", {});
   const refBody = useRef(null);
 
   const loadMessages = async () => {
