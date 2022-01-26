@@ -26,6 +26,7 @@ export const ContactApp = forwardRef((props: IContactAppProps, ref: any) => {
         <div className={ cx.toString() } style={ props.style }>
           { (props.relative || show) && (
             <ChatContact
+              mute={props.mute}
               description={ props.description }
               dropdownSettings={ props.dropdownSettings }
               onClickMute={ props.onClickMute }
