@@ -30,7 +30,8 @@ export const ChatContact = (props: IChatContactProps) => {
       <CardHeader>
         <SpaceBetween>
           <Dropdown trigger={ <Button round icon={ <i className={ "fa fa-ellipsis-v" }/> }/> }>
-            <DropdownItem icon={ <i className={ "fa fa-volume-mute" }/> }>{ i18.get("mute") }</DropdownItem>
+            <DropdownItem onClick={props.onClickMute} icon={ <i className={ "fa fa-volume-mute" }/> }>{ i18.get("mute") }</DropdownItem>
+            {props.dropdownSettings}
           </Dropdown>
           <Title>{ i18.get("chatContactTitle") }</Title>
           <Button round icon={ <i className={ "fa fa-minus" }/> } onClick={ onClose }/>

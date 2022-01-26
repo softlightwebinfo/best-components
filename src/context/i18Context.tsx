@@ -22,13 +22,25 @@ export const I18Context = createContext<I18ContextState>({
   },
 });
 
+const initialize = (translates: Record<TLanguage, Record<string, string>>) => {
+  let data = {
+    ...i18Translates,
+  };
+
+  Object.entries(translates ?? {}).forEach(([lang, value]) => {
+    data[lang] = {
+      ...data[lang],
+      ...value,
+    };
+  });
+
+  return data;
+};
+
 export const I18Provider = (props: I18ProviderProps) => {
   const [state, setState] = useState({
     lang: props.lang ?? "es",
-    translates: {
-      ...i18Translates,
-      ...props.translates ?? {},
-    },
+    translates: initialize(props.translates),
   });
 
   const value: I18ContextState = {
