@@ -36,6 +36,7 @@ export const ContactApp = forwardRef((props: IContactAppProps, ref: any) => {
             <Fab
               onClick={ toggle }
               icon={ <i style={ { fontSize: 20 } } className={ "fa fa-comment" }/> }
+              {...props.fab}
             />
           ) }
         </div>
