@@ -62,7 +62,7 @@ export const ContactAppProvider = forwardRef((props: IContactAppProviderProps, r
 
   useEffect(() => {
     loadMessages();
-  }, [props.onLoadMessages]);
+  }, []);
 
   useEffect(() => {
     if (localChat.initialize) {
