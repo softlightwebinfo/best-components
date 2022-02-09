@@ -15,6 +15,10 @@
     grid-template-columns: repeat(auto-fit, minmax(var(--grid-default_auto-column, 300px), 1fr));
   }
 
+  &--autoMinMax {
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-default_auto-column-min, 200px), var(--grid-default_auto-column-max, 400px)));
+  }
+
   &--margin {
     margin: var(--space-m);
   }

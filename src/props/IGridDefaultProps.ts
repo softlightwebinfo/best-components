@@ -10,4 +10,6 @@ export interface IGridDefaultProps extends IProps {
   lg?: number;
   xl?: number;
   xxl?: number;
+  autoMin?: number;
+  autoMax?: number;
 }

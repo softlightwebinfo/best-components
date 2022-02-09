@@ -11,6 +11,7 @@ export const GridDefault = (props: IGridDefaultProps) => {
     col: props.col,
     auto: !!props.auto,
     margin: props.margin,
+    autoMinMax: props.autoMin && props.autoMax,
   });
 
   cx.Append(props.className);
@@ -20,6 +21,14 @@ export const GridDefault = (props: IGridDefaultProps) => {
 
   if (!!props.auto) {
     style['--grid-default_auto-column'] = `${ props.auto }px`;
+  }
+
+  if (props.autoMin) {
+    style['--grid-default_auto-column-min'] = `${ props.autoMin }px`;
+  }
+
+  if (props.autoMax) {
+    style['--grid-default_auto-column-max'] = `${ props.autoMax }px`;
   }
 
   return (
