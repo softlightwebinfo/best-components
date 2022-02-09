@@ -11,7 +11,7 @@ export const GridDefault = (props: IGridDefaultProps) => {
     col: props.col,
     auto: !!props.auto,
     margin: props.margin,
-    autoMinMax: props.autoMin && props.autoMax,
+    autoMinMax: !!(props.autoMin && props.autoMax),
   });
 
   cx.Append(props.className);
