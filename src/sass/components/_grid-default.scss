@@ -19,6 +19,16 @@
     grid-template-columns: repeat(auto-fit, minmax(var(--grid-default_auto-column-min, 200px), var(--grid-default_auto-column-max, 400px)));
   }
 
+  &--autoMapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--grid-default_auto-column-min, 200px), var(--grid-default_auto-column-max, 1fr)));
+    align-items: flex-start;
+    grid-auto-flow: var(--grid-default_auto-column-flow, dense);
+    grid-auto-columns: minmax(var(--grid-default_auto-column-min, 200px), var(--grid-default_auto-column-max, 1fr));
+    overflow: auto;
+    width: 100%;
+  }
+
   &--margin {
     margin: var(--space-m);
   }
